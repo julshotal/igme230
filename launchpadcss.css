@@ -14,7 +14,7 @@ html {
 
 h1{
     text-align: left;
-    color: #A2BCC7;
+    color: #4eadd8;
     font-size: 3em;
     padding-bottom: 4px;
     border-bottom: 2px dotted #8DA4AD;
@@ -50,15 +50,14 @@ a {
     font-size: 1.5em;
     margin: 1em;
     line-height: 10em;
-    border: 3px solid;
-    border-radius: 50%;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 
-#exercises a, #exercises2 a {
-    border-color: #438780;
-    background-color: #438780;
+#exercises a {
+    border: 4px solid;
+    border-radius: 50%;
+    border-color: #4eadd8;
+    background-color: #4eadd8;
     padding-left: 2em;
     padding-right: 2em;
     padding-top: 2em;
@@ -66,19 +65,51 @@ a {
 }
 
 #projects a {
-
-    border-color: #4E82A1;
-    background-color: #548FD4;
+    border: 4px solid;
+    border-radius: 50%;
+    border-color: #4eadd8;
+    background-color: #4eadd8;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
 
-#projects {
-    border-bottom: 2px dotted #8DA4AD;
+/* https://www.w3schools.com/css/css3_transitions.asp */
+#projects a:hover, #exercises a:hover {
+    -webkit-transition: color 800ms;
+    transition: 800ms;
+    color: #4eadd8;
+    border: 4px dotted;
+    border-color: #4eadd8;
+    background-color: rgba(0, 0, 0, 0);
 }
+
 
 .links {
     margin-left: 6em;
 }
+
+#projects, #exercises {
+    position: static;
+}
+
+/* https://www.w3schools.com/css/css3_animations.asp */
+#projects, #exercises {
+    animation-name: pop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 450ms;
+  }
+
+  @keyframes pop {
+    0% {transform: scale(.09); }
+    30% {transform: scale(1); }
+    50% { transform: scale(1.1); }
+    70% {transform: scale(1); }
+    100% { transform: scale(1); } 
+ } 
+
+

@@ -48,3 +48,28 @@ h1 {
     text-align: left;
     padding-top: 2px;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid blue;
+}
+
+a[href^="http"]:after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesom 5 Free";
+    font-weight: 900;
+    content: "\f35d";
+    padding-left: 3px;
+    font-size: 90%;
+}
+
+a[href^="http://en.wikipedia"]:after {
+    content: none;
+}
