@@ -13,13 +13,14 @@ html {
 }
 
 h1{
+    padding-top: .5em;
     text-align: left;
     color: #4eadd8;
     font-size: 3em;
+    margin-left: 6em;
+    margin-right: 2em;
     padding-bottom: 4px;
     border-bottom: 2px dotted #8DA4AD;
-    margin-left: 2em;
-    margin-right: 2em;
 }
 
 h2 {
@@ -29,10 +30,11 @@ h2 {
     color: #C0C6C9;
     margin-right: 3em;
     font-weight: normal;
+    padding-bottom: .5em;
 }
 
 h3 {
-    font-size: 1 em;
+    font-size: 1.5em;
     margin-top: 1em;
     color:  #A2BCC7;
 }
@@ -42,7 +44,15 @@ p {
     text-align: left;
     margin-top: 0px;
     color: #C0C6C9;
-    margin-left: 4em;
+    margin-left: 12em;
+    padding-bottom: .5em;
+    max-width: 700px;
+}
+
+img {
+    border-radius: 50%;
+    margin-left: 2em;
+    float: left;
 }
 
 a {
@@ -71,8 +81,8 @@ a {
     background-color: #4eadd8;
     padding-left: 1em;
     padding-right: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 2.3em;
+    padding-bottom: 2.3em;
 }
 
 /* https://www.w3schools.com/css/css3_transitions.asp */
@@ -85,13 +95,15 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
-
 .links {
-    margin-left: 6em;
+    margin-top: 4em;
+    margin-left: 8em;
+    border-left: 2px dotted #8DA4AD;
+    padding-left: 10em;
 }
 
 #projects, #exercises {
-    position: static;
+    position: inherit;
 }
 
 /* https://www.w3schools.com/css/css3_animations.asp */
