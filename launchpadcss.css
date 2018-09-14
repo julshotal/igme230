@@ -1,17 +1,20 @@
+/*applies san serif font to all text*/
 * {
-    box-sizing: border-box;
     font-family: sans-serif;
 }
-
+/*the page is set to a light color background*/
 html {
     background-color: #F2F2F2;
 }
 
+/*makes it so page does not stretch past 1000px*/
 #wrapper {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/*left align h1, makke it blue, apply a dotted border along the bottom, have .5em of space from the top of the page, 
+6em from the left, 2em from the right, and add 4px of padding between the bottom of the heading and the border*/
 h1{
     padding-top: .5em;
     text-align: left;
@@ -23,6 +26,8 @@ h1{
     border-bottom: 2px dotted #8DA4AD;
 }
 
+/* push the igme230 heading to the right side of the page and remove bolding. Set top margin to 0 so it aligns with the p element, 
+put 3em of space between the h2 and the right side of the page, and .5em padding on the bottom to seperate from the projects and exercises */
 h2 {
     font-size: 2em;
     float: right;
@@ -33,12 +38,16 @@ h2 {
     padding-bottom: .5em;
 }
 
+/*Change the font size of the exercises and projects headers, add a 1em top margin to put even more space between the h3 and the
+ p and h2 elements*/
 h3 {
     font-size: 1.5em;
     margin-top: 1em;
     color:  #A2BCC7;
 }
 
+/*Ajust text size, align the text to the left. A left margin is used to line the p up with the h1. Bottom padding seperates p from
+the h3 elements. Set top margint to 0 to fix an alignment problem*/
 p {
     font-size: 1.5em;
     text-align: left;
@@ -46,15 +55,21 @@ p {
     color: #C0C6C9;
     margin-left: 12em;
     padding-bottom: .5em;
-    max-width: 700px;
 }
 
+/*used the border radius to turn the image into a circle, put a margin to add some white space between the img and left side of the
+page. Float it to the left so it will sit beside the h1, p, and h3 elements. Used the padding all around to push border out to create
+a dotted frame around the image*/
 img {
     border-radius: 50%;
     margin-left: 2em;
+    padding: .5em;
+    border: 2px dotted #8DA4AD;
     float: left;
 }
 
+/*Set text color to white, and put a 1em margin all around and a 10em line height so later the circles are evenly spaced. Got rid of the
+underline under all the links*/
 a {
     color: #F2F2F2;
     font-size: 1.5em;
@@ -63,17 +78,19 @@ a {
     text-decoration: none;   
 }
 
+/*Created a solid border around all of the exercise links, and use the border radius to make them circles. Each circular border is filled with
+a bright blue and the border color is matched. The padding is used all around for better spacinf and to make the circles full, without it they
+are only skinny ovals*/
 #exercises a {
     border: 4px solid;
     border-radius: 50%;
     border-color: #4eadd8;
     background-color: #4eadd8;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em;
 }
 
+/*Solid border added and then made circular. Filled with a bright blue and border color is matched. Padding is used to accomodate slightly
+larger text than the exercises and to make the circles well-spaced and full.*/
 #projects a {
     border: 4px solid;
     border-radius: 50%;
@@ -85,6 +102,9 @@ a {
     padding-bottom: 2.3em;
 }
 
+/*When the exercise and project links are hovered over the background color becomes transparent and the border becomes dotted. The text
+color changes so it's visible on the light background. Webkit transition is used so the background and text color change is more gradual
+instead of isntant.*/
 /* https://www.w3schools.com/css/css3_transitions.asp */
 #projects a:hover, #exercises a:hover {
     -webkit-transition: color 800ms;
@@ -95,17 +115,18 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
+/*This includes the h3s and the projects and exercises ids. A dotted border is created and padding and margins are used to make the border
+ centered on the image of me and so the links and h3s line up with the h1 and h2s.*/
 .links {
-    margin-top: 4em;
-    margin-left: 8em;
+    margin-top: 6em;
+    margin-left: 9em;
     border-left: 2px dotted #8DA4AD;
-    padding-left: 10em;
+    padding-left: 9em;
 }
 
-#projects, #exercises {
-    position: inherit;
-}
-
+/*I created an animation called pop, which lasts for 1 second and only runs once on each reload of the page. It runs the frames in a linear
+fashion (aka: it runs from the first to the last in chronological order). The forwards fill mode makes it so the last frame stays on the page
+instead of fading away, which is the circles that contains the link.*/
 /* https://www.w3schools.com/css/css3_animations.asp */
 #projects, #exercises {
     animation-name: pop;
@@ -113,9 +134,11 @@ a {
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-delay: 450ms;
   }
 
+  /*This contains the frames for my pop animation. The frames are indicated by percentages, with 0 being the beginning and the 100% indicating
+  the animation has run 100% of it's course. At 0%, the circles are scaled down. Then they scale up, and up again, then back down. This creates
+  the "pop" effect of the circles getting larger and then going back down to their normal size.*/
   @keyframes pop {
     0% {transform: scale(.09); }
     30% {transform: scale(1); }
