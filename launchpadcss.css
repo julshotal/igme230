@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    background-color: #F2F2F2;
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: left;
+    color: #A2BCC7;
+    font-size: 3em;
+    padding-bottom: 4px;
+    border-bottom: 2px dotted #8DA4AD;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+h2 {
+    font-size: 2em;
+    float: right;
+    margin-top: 0px;
+    color: #C0C6C9;
+    margin-right: 3em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1 em;
+    margin-top: 1em;
+    color:  #A2BCC7;
+}
+
+p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 0px;
+    color: #C0C6C9;
+    margin-left: 4em;
+}
+
+a {
+    color: #F2F2F2;
+    font-size: 1.5em;
+    margin: 1em;
+    line-height: 10em;
+    border: 3px solid;
+    border-radius: 50%;
+    text-decoration: none;
+    
+}
+
+#exercises a, #exercises2 a {
+    border-color: #438780;
+    background-color: #438780;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#projects a {
+
+    border-color: #4E82A1;
+    background-color: #548FD4;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#projects {
+    border-bottom: 2px dotted #8DA4AD;
+}
+
+.links {
+    margin-left: 6em;
+}
