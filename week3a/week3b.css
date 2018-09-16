@@ -4,8 +4,13 @@
 }
 
 #wrapper {
-    max-width: 1000px;
+    max-width: 1000px;  
     margin: 0 auto;
+}
+
+p, li {
+    font-size: 0.875em;
+    line-height: 1.6;
 }
 
 .subhead {
@@ -18,7 +23,7 @@ h1, h2 {
     font-family: serif;
     border-bottom: 1px solid #a2a9b1;
     font-weight: normal;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 h1 {
@@ -40,22 +45,20 @@ h1 {
 }
 
 #infobox img {
-    max-width: 100%;
-}
+    max-width: 100%; 
+} 
 
 #infobox th, #infobox td {
     vertical-align: top;
     text-align: left;
-    padding-top: 2px;
+    padding-top: 2px; 
 }
 
-a {
+a { 
     text-decoration: none;
 }
 
-a:hover {
-    border-bottom: 1px solid blue;
-}
+a:hover { border-bottom: 1px solid;}
 
 a[href^="http"]:after {
     display: inline-block;
@@ -63,13 +66,13 @@ a[href^="http"]:after {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesom 5 Free";
-    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
     content: "\f35d";
     padding-left: 3px;
     font-size: 90%;
-}
+  }
 
-a[href^="http://en.wikipedia"]:after {
+  a[href^="http://en.wikipedia"]:after {
     content: none;
-}
+  } 
