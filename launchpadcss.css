@@ -74,7 +74,7 @@ a {
     color: #F2F2F2;
     font-size: 1em;
     margin: 1em;
-    line-height: 20px;
+    margin-bottom: 20px;
     text-decoration: none;   
 }
 
@@ -155,103 +155,103 @@ instead of fading away, which is the circles that contains the link.*/
 }
 
 #exercises a:nth-child(2){
-    animation: pop 1s .5s linear both;
+    animation: pop 1s .2s linear both;
 }
 
 #exercises a:nth-child(3){
-    animation: pop 1s 1s linear both;
+    animation: pop 1s .4s linear both;
 }
 
 #exercises a:nth-child(4){
-    animation: pop 1s 1.5s linear both;
+    animation: pop 1s .6s linear both;
 }
 
 #exercises a:nth-child(5){
-    animation: pop 1s 2s linear both;
+    animation: pop 1s .8s linear both;
 }
 
 #exercises a:nth-child(6){
-    animation: pop 1s 2.5s linear both;
+    animation: pop 1s 1s linear both;
 }
 
 #exercises a:nth-child(7){
-    animation: pop 1s 3s linear both;
+    animation: pop 1s 1.2s linear both;
 }
 
 #exercises a:nth-child(8){
-    animation: pop 1s 3.5s linear both;
+    animation: pop 1s 1.4s linear both;
 }
 
 #exercises a:nth-child(9){
-    animation: pop 1s 4s linear both;
+    animation: pop 1s 1.8s linear both;
 }
 
 #exercises a:nth-child(10){
-    animation: pop 1s 4.5s linear both;
+    animation: pop 1s 2s linear both;
 }
 
 #exercises a:nth-child(11){
-    animation: pop 1s 5s linear both;
+    animation: pop 1s 2.2s linear both;
 }
 
 #exercises a:nth-child(12){
-    animation: pop 1s 5.5s linear both;
+    animation: pop 1s 2.4s linear both;
 }
 
 #exercises a:nth-child(13){
-    animation: pop 1s 6s linear both;
+    animation: pop 1s 2.6s linear both;
 }
 
 #exercises a:nth-child(14){
-    animation: pop 1s 6.5s linear both;
+    animation: pop 1s 2.8s linear both;
 }
 
 #exercises a:nth-child(15){
-    animation: pop 1s 7s linear both;
+    animation: pop 1s 3s linear both;
 }
 
 #exercises a:nth-child(16){
-    animation: pop 1s 7.5s linear both;
+    animation: pop 1s 3.2s linear both;
 }
 
 #exercises a:nth-child(17){
-    animation: pop 1s 8s linear both;
+    animation: pop 1s 3.4s linear both;
 }
 
 #exercises a:nth-child(18){
-    animation: pop 1s 8.5s linear both;
+    animation: pop 1s 3.6s linear both;
 }
 
 #exercises a:nth-child(19){
-    animation: pop 1s 9s linear both;
+    animation: pop 1s 3.8s linear both;
 }
 
 #exercises a:nth-child(20){
-    animation: pop 1s 9.5s linear both;
+    animation: pop 1s 4s linear both;
 }
 
 #exercises a:nth-child(21){
-    animation: pop 1s 10s linear both;
+    animation: pop 1s 4.2s linear both;
 }
 
 #exercises a:nth-child(22){
-    animation: pop 1s 10.5s linear both;
+    animation: pop 1s 4.4s linear both;
 }
 
 #exercises a:nth-child(23){
-    animation: pop 1s 11s linear both;
+    animation: pop 1s 4.6s linear both;
 }
 
 #exercises a:nth-child(24){
-    animation: pop 1s 11.5s linear both;
+    animation: pop 1s 4.8s linear both;
 }
 
 #exercises a:nth-child(25){
-    animation: pop 1s 12s linear both;
+    animation: pop 1s 5s linear both;
 }
 
 #exercises a:nth-child(26){
-    animation: pop 1s 12.5s linear both;
+    animation: pop 1s 5.2s linear both;
 }
 
   /*This contains the frames for my pop animation. The frames are indicated by percentages, with 0 being the beginning and the 100% indicating
