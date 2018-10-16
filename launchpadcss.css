@@ -82,15 +82,18 @@ a {
 a bright blue and the border color is matched. The padding is used all around for better spacinf and to make the circles full, without it they
 are only skinny ovals*/
 #exercises a {
-    text-align: justify;
+    text-align: center;
     display: inline-block;
     border: 4px solid;
-    border-radius: 20%;
-    width: 85px;
-    height: 85px;
+    border-radius: 50%;
+    width: 90px;
+    height: 80px;
     border-color: #4eadd8;
     background-color: #4eadd8;
-    padding: 0 20px 20px 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2.3em;
+    padding-bottom: .3em;
     overflow-wrap: break-word;
 }
 
@@ -98,7 +101,8 @@ are only skinny ovals*/
 larger text than the exercises and to make the circles well-spaced and full.*/
 #projects a {
     border: 4px solid;
-    border-radius: 20%;
+    display: inline-block;
+    border-radius: 50%;
     border-color: #4eadd8;
     background-color: #4eadd8;
     padding-left: 1em;
@@ -131,22 +135,131 @@ instead of isntant.*/
 }
 
 /*I created an animation called pop, which lasts for 1 second and only runs once on each reload of the page. It runs the frames in a linear
-fashion (aka: it runs from the first to the last in chronological order). The forwards fill mode makes it so the last frame stays on the page
+fashion (aka: it runs from the first to the last in chronological order). The both fill mode makes it so the last frame stays on the page
 instead of fading away, which is the circles that contains the link.*/
 /* https://www.w3schools.com/css/css3_animations.asp */
-#projects, #exercises {
-    animation-name: pop;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
+#projects a:nth-child(1){
+    animation: pop 1s linear both;
+}
+
+#projects a:nth-child(2){
+    animation: pop 1s .5s linear both;
+}
+
+#projects a:nth-child(3){
+    animation: pop 1s 1s linear both;
+}
+
+#exercises a:nth-child(1){
+    animation: pop 1s linear both;
+}
+
+#exercises a:nth-child(2){
+    animation: pop 1s .5s linear both;
+}
+
+#exercises a:nth-child(3){
+    animation: pop 1s 1s linear both;
+}
+
+#exercises a:nth-child(4){
+    animation: pop 1s 1.5s linear both;
+}
+
+#exercises a:nth-child(5){
+    animation: pop 1s 2s linear both;
+}
+
+#exercises a:nth-child(6){
+    animation: pop 1s 2.5s linear both;
+}
+
+#exercises a:nth-child(7){
+    animation: pop 1s 3s linear both;
+}
+
+#exercises a:nth-child(8){
+    animation: pop 1s 3.5s linear both;
+}
+
+#exercises a:nth-child(9){
+    animation: pop 1s 4s linear both;
+}
+
+#exercises a:nth-child(10){
+    animation: pop 1s 4.5s linear both;
+}
+
+#exercises a:nth-child(11){
+    animation: pop 1s 5s linear both;
+}
+
+#exercises a:nth-child(12){
+    animation: pop 1s 5.5s linear both;
+}
+
+#exercises a:nth-child(13){
+    animation: pop 1s 6s linear both;
+}
+
+#exercises a:nth-child(14){
+    animation: pop 1s 6.5s linear both;
+}
+
+#exercises a:nth-child(15){
+    animation: pop 1s 7s linear both;
+}
+
+#exercises a:nth-child(16){
+    animation: pop 1s 7.5s linear both;
+}
+
+#exercises a:nth-child(17){
+    animation: pop 1s 8s linear both;
+}
+
+#exercises a:nth-child(18){
+    animation: pop 1s 8.5s linear both;
+}
+
+#exercises a:nth-child(19){
+    animation: pop 1s 9s linear both;
+}
+
+#exercises a:nth-child(20){
+    animation: pop 1s 9.5s linear both;
+}
+
+#exercises a:nth-child(21){
+    animation: pop 1s 10s linear both;
+}
+
+#exercises a:nth-child(22){
+    animation: pop 1s 10.5s linear both;
+}
+
+#exercises a:nth-child(23){
+    animation: pop 1s 11s linear both;
+}
+
+#exercises a:nth-child(24){
+    animation: pop 1s 11.5s linear both;
+}
+
+#exercises a:nth-child(25){
+    animation: pop 1s 12s linear both;
+}
+
+#exercises a:nth-child(26){
+    animation: pop 1s 12.5s linear both;
+}
 
   /*This contains the frames for my pop animation. The frames are indicated by percentages, with 0 being the beginning and the 100% indicating
   the animation has run 100% of it's course. At 0%, the circles are scaled down. Then they scale up, and up again, then back down. This creates
   the "pop" effect of the circles getting larger and then going back down to their normal size.*/
   @keyframes pop {
-    0% {transform: scale(.09); }
+    0% {transform: scale(.000000000002)}
+    5% {transform: scale(.09); }
     30% {transform: scale(1); }
     50% { transform: scale(1.1); }
     70% {transform: scale(1); }
