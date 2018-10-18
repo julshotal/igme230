@@ -97,6 +97,12 @@ are only skinny ovals*/
     overflow-wrap: break-word;
 }
 
+ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
 /*Solid border added and then made circular. Filled with a bright blue and border color is matched. Padding is used to accomodate slightly
 larger text than the exercises and to make the circles well-spaced and full.*/
 #projects a {
@@ -138,120 +144,124 @@ instead of isntant.*/
 fashion (aka: it runs from the first to the last in chronological order). The both fill mode makes it so the last frame stays on the page
 instead of fading away, which is the circles that contains the link.*/
 /* https://www.w3schools.com/css/css3_animations.asp */
-#projects a:nth-child(1){
+#projects li:nth-child(1){
     animation: pop 1s linear both;
 }
 
-#projects a:nth-child(2){
+#projects li:nth-child(2){
     animation: pop 1s .5s linear both;
 }
 
-#projects a:nth-child(3){
+#projects li:nth-child(3){
     animation: pop 1s 1s linear both;
 }
 
-#exercises a:nth-child(1){
+#exercises li:nth-child(1){
     animation: pop 1s linear both;
 }
 
-#exercises a:nth-child(2){
+#exercises li:nth-child(2){
     animation: pop 1s .2s linear both;
 }
 
-#exercises a:nth-child(3){
+#exercises li:nth-child(3){
     animation: pop 1s .4s linear both;
 }
 
-#exercises a:nth-child(4){
+#exercises li:nth-child(4){
     animation: pop 1s .6s linear both;
 }
 
-#exercises a:nth-child(5){
+#exercises li:nth-child(5){
     animation: pop 1s .8s linear both;
 }
 
-#exercises a:nth-child(6){
+#exercises li:nth-child(6){
     animation: pop 1s 1s linear both;
 }
 
-#exercises a:nth-child(7){
+#exercises li:nth-child(7){
     animation: pop 1s 1.2s linear both;
 }
 
-#exercises a:nth-child(8){
+#exercises li:nth-child(8){
     animation: pop 1s 1.4s linear both;
 }
 
-#exercises a:nth-child(9){
+#exercises li:nth-child(9){
     animation: pop 1s 1.8s linear both;
 }
 
-#exercises a:nth-child(10){
+#exercises li:nth-child(10){
     animation: pop 1s 2s linear both;
 }
 
-#exercises a:nth-child(11){
+#exercises li:nth-child(11){
     animation: pop 1s 2.2s linear both;
 }
 
-#exercises a:nth-child(12){
+#exercises li:nth-child(12){
     animation: pop 1s 2.4s linear both;
 }
 
-#exercises a:nth-child(13){
+#exercises li:nth-child(13){
     animation: pop 1s 2.6s linear both;
 }
 
-#exercises a:nth-child(14){
+#exercises li:nth-child(14){
     animation: pop 1s 2.8s linear both;
 }
 
-#exercises a:nth-child(15){
+#exercises li:nth-child(15){
     animation: pop 1s 3s linear both;
 }
 
-#exercises a:nth-child(16){
+#exercises li:nth-child(16){
     animation: pop 1s 3.2s linear both;
 }
 
-#exercises a:nth-child(17){
+#exercises li:nth-child(17){
     animation: pop 1s 3.4s linear both;
 }
 
-#exercises a:nth-child(18){
+#exercises li:nth-child(18){
     animation: pop 1s 3.6s linear both;
 }
 
-#exercises a:nth-child(19){
+#exercises li:nth-child(19){
     animation: pop 1s 3.8s linear both;
 }
 
-#exercises a:nth-child(20){
+#exercises li:nth-child(20){
     animation: pop 1s 4s linear both;
 }
 
-#exercises a:nth-child(21){
+#exercises li:nth-child(21){
     animation: pop 1s 4.2s linear both;
 }
 
-#exercises a:nth-child(22){
+#exercises li:nth-child(22){
     animation: pop 1s 4.4s linear both;
 }
 
-#exercises a:nth-child(23){
+#exercises li:nth-child(23){
     animation: pop 1s 4.6s linear both;
 }
 
-#exercises a:nth-child(24){
+#exercises li:nth-child(24){
     animation: pop 1s 4.8s linear both;
 }
 
-#exercises a:nth-child(25){
+#exercises li:nth-child(25){
     animation: pop 1s 5s linear both;
 }
 
-#exercises a:nth-child(26){
+#exercises li:nth-child(26){
     animation: pop 1s 5.2s linear both;
+}
+
+#exercises li:nth-child(27){
+    animation: pop 1s 5.4s linear both;
 }
 
   /*This contains the frames for my pop animation. The frames are indicated by percentages, with 0 being the beginning and the 100% indicating
