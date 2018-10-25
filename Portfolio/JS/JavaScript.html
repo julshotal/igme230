@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="PortStyle.css" type=text/css>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: JavaScript</title>
+</head>
+
+<body>
+        <nav role="navigation">
+                <ul>
+                    <li>My Work</li>
+                        <ul class="dropdown">
+                            <li>JavaScript</li>
+                                <ul class="subdrop">
+                                    <li>Genetic Algorithm</li>
+                                    <li>Click and Point Game</li>
+                                    <li>Arcade Game</li>
+                                </ul>
+                            <li>C#</li>
+                                <ul class="subdrop">
+                                    <li>Bookmarks Tool</li>
+                                    <li>Filereader</li>
+                                    <li>Project 1</li>
+                                </ul>
+                            <li>Web and Mobile</li>
+                                <ul class="subdrop">
+                                    <li>Research Paper</li>
+                                    <li>Launchpad</li>
+                                    <li>App 1</li>
+                                </ul>
+                            <li>Graphic Design</li>
+                                <ul class="subdrop">
+                                    <li>Literal Typography</li>
+                                    <li>Social Cause Posters</li>
+                                    <li>Logo Design</li>
+                                </ul>
+                        </ul>
+                    <li>Contact Me</li>
+                    <li>Resume</li>
+                    <li>About This Site</li>
+                </ul>
+            </nav>
+
+        <h1>JavaScript</h1>
+
+        <p class="intro">click on the preview below to view full work</p>
+
+        <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+        <a href="JS1.html"><img class="slide" src="/images/place1.jpg" alt="Genetic Algorithm"></a>
+        <a href="JS2.html"><img class="slide" src="/images/place2.jpg" alt="Click and Point Game"></a>
+        <a href="JS3.html"><img class="slide" src="/images/place3.jpg" alt="Arcade Game"></a>
+
+        <p class="descrip">short project description1</p>
+        <p class="descrip">short project description2</p>
+        <p class="descrip">short project description3</p>
+        
+        <script>
+            let slideNum= 0;
+            let paraNum = 0;
+            rotateThrough();
+
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+                let descrips = document.getElementsByClassName("descrip");
+
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                  descrips[i].style.display = "none";
+                }
+
+                slideNum++;
+                paraNum++;
+
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
+
+                if(paraNum > descrips.length) {
+                    paraNum = 1;
+                }
+
+                slides[slideNum-1].style.display = "block"; 
+                descrips[paraNum-1].style.display = "block";
+                setTimeout(rotateThrough, 5000);
+            }
+        </script>
+</body>
+</html>
