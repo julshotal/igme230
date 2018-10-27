@@ -41,7 +41,25 @@
 </div>
 
 <script>
-/* Write your code here! */
+	let buttons = document.getElementsByName("colorGroup");
+
+
+	let colorPick = (e) => {
+            let color = this.value; 
+            if (color == "red") {
+                e.target.style.backgroundColor = "red";
+            } else if(color == "green"){
+                e.target.style.backgroundColor = "green";
+            }else if(color == "blue"){
+				e.target.style.backgroundColor = "blue";
+			}
+	}
+
+	for(let i = 0; i < buttons.length; i++){
+		buttons[i].addEventListener("click", colorPick);
+	}
+
+
 </script>
 </body>
 </html>
