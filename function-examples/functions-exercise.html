@@ -43,18 +43,16 @@
         foods.push("cake");
 
 
-        for(let i = 0; i < colors.length; i++){
-            let newListItem = document.createElement("li");
-            newListItem.innerHTML = colors[i];
-            let orderedList = document.querySelector("ol");
-            orderedList.appendChild(newListItem);
-        }
+        createList("#foodsList", foods);
+        createList("#colorsList", colors);
 
-        for(let i = 0; i < foods.length; i++){
-            let newListItem = document.createElement("li");
-            newListItem.innerHTML = foods[i];
-            let orderedList = document.querySelector("ol");
-            orderedList.appendChild(newListItem);
+        function createList(listElement, array){
+            for(let i = 0; i < array.length; i++){
+                let newListItem = document.createElement("li");
+                newListItem.innerHTML = array[i];
+                let list = document.querySelector(listElement);
+                list.appendChild(newListItem);
+            }
         }
     </script>
     
