@@ -42,23 +42,41 @@
 
 <script>
 	let buttons = document.getElementsByName("colorGroup");
-
-
-	let colorPick = (e) => {
-            let color = this.value; 
-            if (color == "red") {
-                e.target.style.backgroundColor = "red";
-            } else if(color == "green"){
-                e.target.style.backgroundColor = "green";
-            }else if(color == "blue"){
-				e.target.style.backgroundColor = "blue";
-			}
-	}
+	let input;
+	let infoBox = document.getElementById("info");
+	let final = document.getElementById("colorButton");
+	let legend = document.querySelector("legend");
 
 	for(let i = 0; i < buttons.length; i++){
-		buttons[i].addEventListener("click", colorPick);
+		buttons[i].addEventListener("click", function() { 
+			input = this.value;
+
+			if(input == "red"){
+				infoBox.innerHTML = "You have selected the color red";
+			} else if (input == "green") {
+				infoBox.innerHTML = "You have selected the color green";
+			} else if (input == "blue"){
+				infoBox.innerHTML = "You have selected the color blue";
+			}
+		});
 	}
 
+	//used w3 schools to learn how to disable submit button
+	final.addEventListener("click", function() { 
+		if(input == "red"){
+				infoBox.innerHTML = "Your FINAL CHOICE is red";
+				final.disabled = true;
+				legend.style.color = "red";
+			} else if (input == "green") {
+				infoBox.innerHTML = "Your FINAL CHOICE is green";
+				final.disabled = true;
+				legend.style.color = "green";
+			} else if (input == "blue"){
+				infoBox.innerHTML = "Your FINAL CHOICE is blue";
+				final.disabled = true;
+				legend.style.color = "blue";
+			}
+		});
 
 </script>
 </body>
