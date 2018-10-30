@@ -1,0 +1,97 @@
+
+/*mobile devices*/
+@media screen and (max-width: 600px) {
+
+    html {
+        background-color: #c4285b;
+    }
+
+    .wrapper {
+        display: flex;
+        max-width: 400px;
+    }
+
+    /*https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
+    .hamburger {
+        display: flex;
+        order: 1;
+        width: 25px;
+        height: 5px;
+        background-color: white;
+        margin: 4px;
+        transition: .8s
+    }
+
+    .change .hamburger:nth-child(1) {
+        -webkit-transform: rotate(-45deg);
+        transform:rotate(-45deg) translate(-5px, 8px);
+    }
+    
+    .change .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .change .hamburger:nth-child(3) {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg) translate(-5px, -8px);
+    }
+
+    h1 {
+        display: flex;
+        order: 2;
+        font-family: 'Lato', sans-serif;
+        font-size: 50px;
+        color: white;
+    }
+
+    h2 {
+        display: flex;
+        order: 3;
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    [role=navigation] {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+/*ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.dropdown {
+     visibility: hidden;
+     opacity: 0;
+     display: none;
+}
+   
+ul li:hover > ul,
+ul li:focus-within > ul,
+.dropdown:hover {
+     visibility: visible;
+     opacity: 1;
+     display: flex;
+     flex-direction: column;
+}
+
+.subdrop{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+  
+.dropdown:hover > ul,
+.dropdown:focus-within > ul,
+ul li ul li:hover {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}*/
