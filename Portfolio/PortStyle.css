@@ -1,13 +1,19 @@
 
+html {
+    background-image: url(images/triangle.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
 /*mobile devices*/
 @media screen and (max-width: 600px) {
-
     html {
-        background-color: #c4285b;
+        background-size: 130%;
     }
 
     .wrapper {
         display: flex;
+        flex-direction: column;
         max-width: 400px;
     }
 
@@ -19,7 +25,7 @@
         height: 5px;
         background-color: white;
         margin: 4px;
-        transition: .8s
+        transition: .8s;
     }
 
     .change .hamburger:nth-child(1) {
@@ -37,28 +43,31 @@
     }
 
     h1 {
-        display: flex;
-        order: 2;
         font-family: 'Lato', sans-serif;
-        font-size: 50px;
+        order: 2;
+        word-wrap: break-word;
+        font-size: 30px;
         color: white;
+        margin-left: 10px;
     }
 
     h2 {
-        display: flex;
         order: 3;
-        font-family: 'Lato', sans-serif;
-        font-size: 30px;
-        color: white;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        justify-content: flex-end;
+        margin-top: 250px;
+        margin-left: 50px;
+        font-size: 20px;
+        color: #c4285b;
     }
 
-    [role=navigation] {
-        visibility: hidden;
+    [role="navigation"] {
         display: none;
     }
 }
 
-/*ul {
+ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -94,4 +103,9 @@ ul li ul li:hover {
     opacity: 1;
     display: flex;
     flex-direction: column;
-}*/
+}
+
+svg {
+    height: 5%;
+    width: 5%;
+}
