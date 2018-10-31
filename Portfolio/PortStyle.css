@@ -49,15 +49,17 @@ html {
         font-size: 30px;
         color: white;
         margin-left: 10px;
+        padding-bottom: 0;
     }
 
     h2 {
         order: 3;
         font-family: 'Montserrat', sans-serif;
         text-align: center;
+        word-wrap: break-word;
         justify-content: flex-end;
         margin-top: 250px;
-        margin-left: 50px;
+        margin-left: 80px;
         font-size: 20px;
         color: #c4285b;
     }
@@ -67,38 +69,56 @@ html {
     }
 }
 
-ul {
-    list-style-type: none;
+.wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
+}
+
+ul a, ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+ul a {
+    padding: 40px 50px 10px 50px;
 }
 
 .dropdown {
-     visibility: hidden;
-     opacity: 0;
-     display: none;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    padding: auto;
 }
    
 ul li:hover > ul,
 ul li:focus-within > ul,
 .dropdown:hover {
-     visibility: visible;
-     opacity: 1;
-     display: flex;
-     flex-direction: column;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .subdrop{
+    z-index: 1;
     visibility: hidden;
     opacity: 0;
     display: none;
+    padding: auto;
 }
   
 .dropdown:hover > ul,
 .dropdown:focus-within > ul,
 ul li ul li:hover {
+    z-index: 1;
     visibility: visible;
     opacity: 1;
     display: flex;
@@ -109,3 +129,26 @@ svg {
     height: 5%;
     width: 5%;
 }
+
+h1 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
+    font-size: 70px;
+    margin-left: 40px;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #c4285b;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30%;
+    margin-left: 30px;
+    margin-right: 5%;
+}
+
+/*.hexagon {
+    z-index: 1;
+}*/
+
