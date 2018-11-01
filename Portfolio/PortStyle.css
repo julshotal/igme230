@@ -28,6 +28,10 @@ html {
         transition: .8s;
     }
 
+    .change [role="Navigation"] {
+        display: flex;
+    }
+
     .change .hamburger:nth-child(1) {
         -webkit-transform: rotate(-45deg);
         transform:rotate(-45deg) translate(-5px, 8px);
@@ -88,37 +92,13 @@ ul a {
 
 .dropdown {
     z-index: 1;
-    visibility: hidden;
     opacity: 0;
     display: none;
     padding: auto;
-}
-   
-ul li:hover > ul,
-ul li:focus-within > ul,
-.dropdown:hover {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
-    display: flex;
 }
 
-.subdrop{
-    z-index: 1;
-    visibility: hidden;
-    opacity: 0;
-    display: none;
-    padding: auto;
-}
-  
-.dropdown:hover > ul,
-.dropdown:focus-within > ul,
-ul li ul li:hover {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
+.show {
     display: flex;
-    flex-direction: column;
 }
 
 svg {
@@ -150,4 +130,6 @@ h2 {
 /*.hexagon {
     z-index: 1;
 }*/
+
+
 

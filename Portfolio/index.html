@@ -19,47 +19,27 @@
     <img class="hexagon" src="images/hexagon.svg" alt="hexagon">
     <img class="hexagon" src="images/hexagon.svg" alt="hexagon">-->
 
-    <nav role="navigation">
-            <ul>
-              <li class="drop"><a href="#">My Work</a>
+  <nav role="navigation">
+        <ul>
+            <li onclick="showLinks()" class="drop"><a href="#">My Work</a>
                 <ul class="dropdown">
                   <li><a href="JS/JavaScript.html">JavaScript</a></li>
-                      <ul class="subdrop">
-                            <li><a href="JS/JS1.html">Genetic Algorithm</a></li>
-                            <li><a href="JS/JS2.html">Click and Point Game</a></li>
-                            <li><a href="JS/JS3.html">Arcade Game</a></li>
-                        </ul>
                   <li><a href="CSharp/CSharp.html">C#</a></li>
-                    <ul class="subdrop">
-                            <li><a href="CSharp/c1.html">Bookmarks Tool</a></li>
-                            <li><a href="CSharp/c2.html">Filereader</a></li>
-                            <li><a href="CSharp/c3.html">20 Questions</a></li>
-                        </ul>
                   <li><a href="WnM/WebMobile.html">Web and Mobile</a></li>
-                   <ul class="subdrop">
-                            <li><a href="WnM/WM1.html">Research Paper</a></li>
-                            <li><a href="WnM/WM2.html">Launchpad</a></li>
-                            <li><a href="WnM/WM3.html">App 1</a></li>
-                        </ul>
                   <li><a href="GD/GraphicDesign.html">Graphic Design</a></li>
-                  <ul class="subdrop">
-                            <li><a href="GD/GD1.html">Literal Typography</a></li>
-                            <li><a href="GD/GD2.html">Social Cause Posters</a></li>
-                            <li><a href="GD/GD3.html">Logo Design</a></li>
-                        </ul>
                 </ul>
-              </li>
-              <li><a href="ContactMe.html">Contact Me</a></li>
-              <li><a href="Resume.html">Resume</a></li>
-              <li><a href="AboutSite.html">About This Site </a></li>
-            </ul>
-        </nav>
+            </li>
+            <li><a href="ContactMe.html">Contact Me</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="AboutSite.html">About This Site </a></li>
+        </ul>
+    </nav>
 
  <div class="wrapper">
         <h1>JULIA<br> HOTALING</h1>
         <h2>Code<br> compelling<br> experiences<br></h2>
 
-        <div class="container" onclick="turnX(this)" onclick="showLinks()">
+        <div class="container" onclick="turnX(this)">
             <div class="hamburger"></div>
             <div class="hamburger"></div>
             <div class="hamburger"></div>
@@ -73,7 +53,7 @@
         }
 
         function showLinks() {
-            
+            document.getElementsByClassName("dropdown").classList.toggle("show")
         }
     </script>
 
