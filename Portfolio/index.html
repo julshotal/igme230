@@ -19,24 +19,22 @@
     <img class="hexagon" src="images/hexagon.svg" alt="hexagon">
     <img class="hexagon" src="images/hexagon.svg" alt="hexagon">-->
 
-  <nav role="navigation">
-        <ul>
-            <li onclick="showLinks()" class="drop"><a href="#">My Work</a>
-                <ul class="dropdown">
-                  <li><a href="JS/JavaScript.html">JavaScript</a></li>
-                  <li><a href="CSharp/CSharp.html">C#</a></li>
-                  <li><a href="WnM/WebMobile.html">Web and Mobile</a></li>
-                  <li><a href="GD/GraphicDesign.html">Graphic Design</a></li>
-                </ul>
-            </li>
-            <li><a href="ContactMe.html">Contact Me</a></li>
-            <li><a href="Resume.html">Resume</a></li>
-            <li><a href="AboutSite.html">About This Site </a></li>
-        </ul>
-    </nav>
+<div class="wrapper">
+  <div class="navigation">
+            <button onclick="showLinks()" class="drop"><a href="#">My Work</a>
+                <div id="dropdown" class="dropdown-content">
+                  <a href="JS/JavaScript.html">JavaScript</a>
+                  <a href="CSharp/CSharp.html">C#</a></li>
+                  <a href="WnM/WebMobile.html">Web and Mobile</a>
+                  <a href="GD/GraphicDesign.html">Graphic Design</a>
+                </div>
+            </button>
+            <button><a href="ContactMe.html">Contact Me</a></button>
+            <button><a href="Resume.html">Resume</a></button>
+            <button><a href="AboutSite.html">About This Site </a></button>
+    </div>
 
- <div class="wrapper">
-        <h1>JULIA<br> HOTALING</h1>
+        <h1>JULIA HOTALING</h1>
         <h2>Code<br> compelling<br> experiences<br></h2>
 
         <div class="container" onclick="turnX(this)">
@@ -53,7 +51,7 @@
         }
 
         function showLinks() {
-            document.getElementsByClassName("dropdown").classList.toggle("show")
+            document.getElementsByID("dropdown").classList.toggle("show");
         }
     </script>
 

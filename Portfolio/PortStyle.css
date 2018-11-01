@@ -46,22 +46,29 @@ html {
         transform: rotate(45deg) translate(-5px, -8px);
     }
 
+    button {
+        display: none;
+    }
+
     h1 {
-        font-family: 'Lato', sans-serif;
-        font-size: 30px;
+        order: 1;
+        align-self: flex-start;
         color: white;
-        margin-left: 10px;
-        padding-bottom: 0;
+        font-family: 'Lato', sans-serif;
+        font-size: 70px;
+        margin-left: 40px;
     }
 
     h2 {
-        font-family: 'Montserrat', sans-serif;
+        order: 3;
+        font-size: 50px;
+        align-self: flex-end;
+        flex-shrink: 1;
         text-align: center;
-        justify-content: flex-end;
-        margin-top: 250px;
-        margin-left: 10px;
-        font-size: 10px;
         color: #c4285b;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 100px;
+        margin-right: 10%;
     }
 
     [role="navigation"] {
@@ -70,31 +77,37 @@ html {
 }
 
 .wrapper {
-    order: 1;
     display: flex;
     flex-direction: column;
 }
 
-ul a, ul {
-    list-style-type: none;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-
-    font-family: 'Montserrat', sans-serif;
+button, button a {
+    border: none;
+    background-color: transparent;
     color: white;
+    text-decoration: none;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-ul a {
-    padding: 40px 50px 10px 50px;
+button a {
+    padding: 5px 0px 5px 10px;
 }
 
-.dropdown {
+.navigation {
+    order: 2;
+    margin-left: 40px;
+}
+
+.dropdown-content {
+    display: none;
     z-index: 1;
     opacity: 0;
-    display: none;
-    padding: auto;
+    margin: 10px 15px 5px 15px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .show {
@@ -116,20 +129,16 @@ h1 {
 }
 
 h2 {
-    order: 2;
+    order: 3;
     font-size: 50px;
     align-self: flex-end;
     flex-shrink: 1;
     text-align: center;
     color: #c4285b;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-right: 10%;
 }
-
-/*.hexagon {
-    z-index: 1;
-}*/
 
 
 
