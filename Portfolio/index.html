@@ -21,7 +21,7 @@
 
 <div class="wrapper">
     <div class="dropdown">
-        <button onclick="myFunction()" class="drop">Dropdown</button>
+        <button onclick="myFunction()" class="drop">My Work</button>
         <div id="dropdown" class="dropdown-content">
           <a href="JS/JavaScript.html">JavaScript</a>
           <a href="CSharp/CSharp.html">C#</a>
@@ -47,15 +47,10 @@
 
       
     <script>
+
         function turnX(x) {
             x.classList.toggle("change");
-
-            var x = document.getElementById("dropdown");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
+            document.getElementById("dropdown").classList.toggle("show");
         }
 
        function myFunction() {

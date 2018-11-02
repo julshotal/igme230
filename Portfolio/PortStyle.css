@@ -1,13 +1,13 @@
 
 body.home {
     background-image: url(images/triangle.svg);
+    min-width: 1210px;
     background-size: 80%;
     background-repeat: no-repeat;
 }
 
 body.content {
-     background-image: url(images/rect.svg);
-     height: 10%;
+     background-image: url(images/bg.png);
      background-repeat: no-repeat;
  }
 
@@ -87,7 +87,7 @@ h2 {
     color: #c4285b;
     font-family: 'Montserrat', sans-serif;
     margin-top: 100px;
-    margin-right: 10%;
+    margin-right: 20%;
 }
 
 /* Dropdown Button */
@@ -142,11 +142,13 @@ h2 {
 /*mobile devices*/
 @media screen and (max-width: 1024px) {
     body.home {
-        background-size: 150%;
+        background-size: 135%;
+        min-width: 282px;
+        max-width: 360px;
     }
 
     body.content {
-        height: 200%;
+        background-image: url(images/bg2.png);
     }
 
     .bee {
@@ -190,24 +192,18 @@ h2 {
     }
 
     .dropdown {
-        display: none;
-    }
-
-    .dropdown a {
-        color: white;
-        background-color: #c4285b;
-        text-decoration: none;
-        font-size: 15px;
         display: block;
-    }
+        color: purple;
+      }
 
     h1 {
         order: 1;
+        text-align: center;
         align-self: flex-start;
         color: white;
         font-family: 'Lato', sans-serif;
         font-size: 40px;
-        margin-left: 30px;
+        margin: 0 auto;
     }
 
     h2 {
@@ -248,7 +244,7 @@ h2 {
    
     .slideshow img {
         order: 4;
-        object-fit: contain;
+        width: 100%;
         margin: 0 auto;
         padding-top: 50px;
     }
