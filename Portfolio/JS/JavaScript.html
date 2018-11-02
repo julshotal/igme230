@@ -10,57 +10,41 @@
     <title>Julia Hotaling's Portfolio: JavaScript</title>
 </head>
 
-<body>
+<body class="content">
     <div class ="wrapper">
-        <nav role="navigation">
-            <ul>
-              <li class="drop"><a href="#">My Work</a>
-                <ul class="dropdown">
-                  <li><a href="JS/JavaScript.html">JavaScript</a></li>
-                      <ul class="subdrop">
-                            <li><a href="JS/JS1.html">Genetic Algorithm</a></li>
-                            <li><a href="JS/JS2.html">Click and Point Game</a></li>
-                            <li><a href="JS/JS3.html">Arcade Game</a></li>
-                        </ul>
-                  <li><a href="CSharp/CSharp.html">C#</a></li>
-                    <ul class="subdrop">
-                            <li><a href="CSharp/c1.html">Bookmarks Tool</a></li>
-                            <li><a href="CSharp/c2.html">Filereader</a></li>
-                            <li><a href="CSharp/c3.html">20 Questions</a></li>
-                        </ul>
-                  <li><a href="WnM/WebMobile.html">Web and Mobile</a></li>
-                   <ul class="subdrop">
-                            <li><a href="WnM/WM1.html">Research Paper</a></li>
-                            <li><a href="WnM/WM2.html">Launchpad</a></li>
-                            <li><a href="WnM/WM3.html">App 1</a></li>
-                        </ul>
-                  <li><a href="GD/GraphicDesign.html">Graphic Design</a></li>
-                  <ul class="subdrop">
-                            <li><a href="GD/GD1.html">Literal Typography</a></li>
-                            <li><a href="GD/GD2.html">Social Cause Posters</a></li>
-                            <li><a href="GD/GD3.html">Logo Design</a></li>
-                        </ul>
-                </ul>
-              </li>
-              <li><a href="ContactMe.html">Contact Me</a></li>
-              <li><a href="Resume.html">Resume</a></li>
-              <li><a href="AboutSite.html">About This Site </a></li>
-            </ul>
-          </nav>
+        <div class="dropdownCNT">
+            <button onclick="myFunction()" class="drop">Dropdown</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JS/JavaScript.html">JavaScript</a>
+              <a href="CSharp/CSharp.html">C#</a>
+              <a href="WnM/WebMobile.html">Web and Mobile</a>
+              <a href="GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="ContactMe.html">Contact Me</a></button>
+          <button><a href="Resume.html">Resume</a></button>
+          <button><a href="AboutSite.html">About This Site </a></button>
+        </div>
+    
 
-        <h1>JavaScript</h1>
+        <h1 class="contenthead">JavaScript</h1>
 
         <p class="intro">click on the preview below to view full work</p>
         
         <div class="slideshow">
             <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
-            <a href="JS1.html"><img class="slide" src="../images/GA.png" alt="Genetic Algorithm"></a>
-            <a href="JS2.html"><img class="slide" src="../images/Project2.png" alt="Click and Point Game"></a>
-            <a href="JS3.html"><img class="slide" src="../images/90sKid.png" alt="Arcade Game"></a>
+            <a href="JS1.html"><img class="slide" src="../images/GA.gif" alt="Genetic Algorithm"></a>
+            <a href="JS2.html"><img class="slide" src="../images/Project2.gif" alt="Click and Point Game"></a>
+            <a href="JS3.html"><img class="slide" src="../images/90sKid.gif" alt="Arcade Game"></a>
 
             <p class="descrip">short project description1</p>
             <p class="descrip">short project description2</p>
             <p class="descrip">short project description3</p>
+        </div>
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
         </div>
         
     </div>
@@ -92,8 +76,38 @@
 
                 slides[slideNum-1].style.display = "block"; 
                 descrips[paraNum-1].style.display = "block";
-                setTimeout(rotateThrough, 5000);
+                setTimeout(rotateThrough, 10000);
             }
+
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
         </script>
 </body>
 </html>

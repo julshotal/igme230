@@ -12,40 +12,18 @@
 
 <body>
     <div class="wrapper">
-        <nav role="navigation">
-                <ul>
-                    <li>My Work</li>
-                        <ul class="dropdown">
-                            <li>JavaScript</li>
-                                <ul class="subdrop">
-                                    <li>Genetic Algorithm</li>
-                                    <li>Click and Point Game</li>
-                                    <li>Arcade Game</li>
-                                </ul>
-                            <li>C#</li>
-                                <ul class="subdrop">
-                                    <li>Bookmarks Tool</li>
-                                    <li>Filereader</li>
-                                    <li>Project 1</li>
-                                </ul>
-                            <li>Web and Mobile</li>
-                                <ul class="subdrop">
-                                    <li>Research Paper</li>
-                                    <li>Launchpad</li>
-                                    <li>App 1</li>
-                                </ul>
-                            <li>Graphic Design</li>
-                                <ul class="subdrop">
-                                    <li>Literal Typography</li>
-                                    <li>Social Cause Posters</li>
-                                    <li>Logo Design</li>
-                                </ul>
-                        </ul>
-                    <li>Contact Me</li>
-                    <li>Resume</li>
-                    <li>About This Site</li>
-                </ul>
-            </nav>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="drop">Dropdown</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JS/JavaScript.html">JavaScript</a>
+              <a href="CSharp/CSharp.html">C#</a>
+              <a href="WnM/WebMobile.html">Web and Mobile</a>
+              <a href="GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="ContactMe.html">Contact Me</a></button>
+          <button><a href="Resume.html">Resume</a></button>
+          <button><a href="AboutSite.html">About This Site </a></button>
+        </div>
 
             <h1>About This Site</h1>
 
@@ -56,7 +34,12 @@
             <a href="JS1.html"><img class="slide" src="images/place1.jpg" alt="Genetic Algorithm"></a>
             <a href="JS2.html"><img class="slide" src="images/place2.jpg" alt="Click and Point Game"></a>
             <a href="JS3.html"><img class="slide" src="images/place3.jpg" alt="Arcade Game"></a>
-            
+
+            <div class="container" onclick="turnX(this)">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
         </div>
             <script>
                let slideNum= 0;
