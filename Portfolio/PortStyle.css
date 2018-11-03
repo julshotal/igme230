@@ -40,29 +40,22 @@ body.content {
      padding-top: 100px;
  }
 
+ .slideshow img{
+    border: 1px solid lightgrey;
+    box-shadow: 5px 10px lightgrey;
+ }
+
  .slideshow p {
-    margin: 0 auto;
+    margin-top: 15px;
     font-family: 'Montserrat', sans-serif;
     color: #c4285b;
     font-size: 15px;
-    flex-wrap: wrap;
-    padding: 15px 0 0 0;
+    text-align: center;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-}
-
-.hex {
-    order: 4;
-    display: relative;
-    flex-direction: column;
-    width: 200px;
-}
-
-.hexagon {
-    padding: 10px;
 }
 
 button, button a {

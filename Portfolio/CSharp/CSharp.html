@@ -32,13 +32,13 @@
         
         <div class="slideshow">
             <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
-            <a href="JS1.html"><img class="slide" src="../images/GA.gif" alt="Genetic Algorithm"></a>
-            <a href="JS2.html"><img class="slide" src="../images/Project2.gif" alt="Click and Point Game"></a>
-            <a href="JS3.html"><img class="slide" src="../images/90sKid.gif" alt="Arcade Game"></a>
+            <a href="c1.html"><img class="slide" src="../images/fileIO.gif" alt="Bookmarks Application"></a>
+            <!--<a href="JS2.html"><img class="slide" src="../images/Project2.gif" alt="Click and Point Game"></a>
+            <a href="JS3.html"><img class="slide" src="../images/90sKid.gif" alt="Arcade Game"></a>-->
 
-            <p class="descrip">short project description1</p>
-            <p class="descrip">short project description2</p>
-            <p class="descrip">short project description3</p>
+            <p class="descrip">Bookmarks application using a File IO reader and writer</p>
+            <!--<p class="descrip">short project description2</p>
+            <p class="descrip">short project description3</p>-->
         </div>
 
         <div class="container" onclick="turnX(this)">
@@ -50,34 +50,34 @@
     </div>
 
         <script>
-            let slideNum= 0;
-            let paraNum = 0;
-            rotateThrough();
+            // let slideNum= 0;
+            // let paraNum = 0;
+            // rotateThrough();
 
-            function rotateThrough() {
-                let slides = document.getElementsByClassName("slide");
-                let descrips = document.getElementsByClassName("descrip");
+            // function rotateThrough() {
+            //     let slides = document.getElementsByClassName("slide");
+            //     let descrips = document.getElementsByClassName("descrip");
 
-                for (let i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none"; 
-                  descrips[i].style.display = "none";
-                }
+            //     for (let i = 0; i < slides.length; i++) {
+            //       slides[i].style.display = "none"; 
+            //       descrips[i].style.display = "none";
+            //     }
 
-                slideNum++;
-                paraNum++;
+            //     slideNum++;
+            //     paraNum++;
 
-                if (slideNum > slides.length) {
-                    slideNum = 1;
-                } 
+            //     if (slideNum > slides.length) {
+            //         slideNum = 1;
+            //     } 
 
-                if(paraNum > descrips.length) {
-                    paraNum = 1;
-                }
+            //     if(paraNum > descrips.length) {
+            //         paraNum = 1;
+            //     }
 
-                slides[slideNum-1].style.display = "block"; 
-                descrips[paraNum-1].style.display = "block";
-                setTimeout(rotateThrough, 10000);
-            }
+            //     slides[slideNum-1].style.display = "block"; 
+            //     descrips[paraNum-1].style.display = "block";
+            //     setTimeout(rotateThrough, 10000);
+            // }
 
             function turnX(x) {
             x.classList.toggle("change");
