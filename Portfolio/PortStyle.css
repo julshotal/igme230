@@ -42,12 +42,27 @@ body.content {
 
  .slideshow p {
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #c4285b;
+    font-size: 15px;
+    flex-wrap: wrap;
     padding: 15px 0 0 0;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.hex {
+    order: 4;
+    display: relative;
+    flex-direction: column;
+    width: 200px;
+}
+
+.hexagon {
+    padding: 10px;
 }
 
 button, button a {
@@ -108,6 +123,7 @@ h2 {
     order: 2;
     margin-top: 10px;
     margin-left: 40px;
+    margin-bottom: 0;
     flex-wrap: wrap; 
     position: relative;
 }
