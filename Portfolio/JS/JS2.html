@@ -2,49 +2,99 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Julia Hotaling's Portfolio: Click and Point Game</title>
+    <title>Julia Hotaling's Portfolio: Click and Point</title>
 </head>
 
-<body>
-    <div class="wrapper">
-        <nav role="navigation">
-                <ul>
-                    <li>My Work</li>
-                        <ul class="dropdown">
-                            <li>JavaScript</li>
-                                <ul class="subdrop">
-                                    <li>Genetic Algorithm</li>
-                                    <li>Click and Point Game</li>
-                                    <li>Arcade Game</li>
-                                </ul>
-                            <li>C#</li>
-                                <ul class="subdrop">
-                                    <li>Bookmarks Tool</li>
-                                    <li>Filereader</li>
-                                    <li>Project 1</li>
-                                </ul>
-                            <li>Web and Mobile</li>
-                                <ul class="subdrop">
-                                    <li>Research Paper</li>
-                                    <li>Launchpad</li>
-                                    <li>App 1</li>
-                                </ul>
-                            <li>Graphic Design</li>
-                                <ul class="subdrop">
-                                    <li>Literal Typography</li>
-                                    <li>Social Cause Posters</li>
-                                    <li>Logo Design</li>
-                                </ul>
-                        </ul>
-                    <li>Contact Me</li>
-                    <li>Resume</li>
-                    <li>About This Site</li>
-                </ul>
-            </nav>
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">Dropdown</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="../WnM/WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
         </div>
-</body>
+    
+        
+        <h1 class="contenthead">Click and Point Game</h1>
+        <p class="intro">click on the image below to view the live page</p>
+        
+        <div class="stuff">
+        <div class="image">
+            <a href="JSprojects2/project2/turtle_template/index.html"><img src="../images/CnP.png" alt="Click and Point Game"></a>
+        </div>
 
+        <div class="information">
+            <h3>Overview</h3>
+            <p>This program is a simple click and point game created to demonstrate understanding of collision, key typed events, and mouse events.
+                It takes a user's name, and then allows them to interact with a scene of a snowy forest. The user can control the speed of the snow, 
+                interact with the owl, and turn on the flashlight and move it with the arrow keys to see what lurks in the dark.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project was created with JavaScript using p5.js libraries.</p>
+
+            <h3>Challenges</h3>
+            <p>The biggest challenge was the collision between the hidden forest objects and the diameter of the flashlight, the outer edges of 
+                each object had to be calculated so conditionals could be written to make the forest objects visible only when the flashlight
+                beam is on them
+            </p>
+
+            <button><a href="https://github.com/julshotal/Click-and-Point-Game">View Code</a></button>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
 </html>

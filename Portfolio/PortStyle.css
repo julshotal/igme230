@@ -11,6 +11,28 @@ body.content {
      background-repeat: no-repeat;
  }
 
+ ::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #dedede; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    min-height: 10px;
+    border: 2px solid #dedede;
+    background: #c4285b;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #941e46; 
+}
+
  .contenthead {
      order: 2;
      text-align: center;
@@ -34,6 +56,61 @@ body.content {
      padding: 15px 0 0 0;
  }
 
+ .stuff {
+     order: 4;
+     display: flex;
+     flex-direction: row;
+ }
+
+ .image {
+     flex-direction: row;
+     padding-top: 110px;
+     order: 1;
+     flex-grow: 1;
+     padding-left: 15px;
+ }
+
+ .image img {
+     max-width: 500px;
+ }
+
+ .information {
+     padding-right: 40px;
+     flex-grow: 2;
+     align-content: left;
+     padding-top: 90px;
+     max-width: 60%;
+     order: 2;
+ }
+
+ .information h3 {
+     font-family: 'Lato', sans-serif;
+     font-size: 20px;
+     color: #c4285b;
+ }
+
+ .information p {
+     font-family: 'Montserrat', sans-serif;
+     font-size: 15px;
+     color: #941e46;
+ }
+
+ .information button, .quicklinks button {
+     margin-top: 15px;
+     background-color: #dedede;
+     font-family: 'Montserrat', sans-serif;
+     color: #c4285b;
+     -webkit-transition: .8s;
+     transition: .8s;
+ }
+
+ .information button:hover, .quicklinks button:hover {
+    margin-top: 15px;
+    background-color: #c4285b;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
  .slideshow {
      order: 4;
      margin: 0 auto;
@@ -51,6 +128,11 @@ body.content {
     color: #c4285b;
     font-size: 15px;
     text-align: center;
+}
+
+.quicklinks {
+    order: 5;
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -136,6 +218,7 @@ h2 {
 .dropdown-content a {
     color: #c4285b;
     transition: .8s;
+    -webkit-transition: .8s;
     padding: 15px 20px;
     text-decoration: none;
     display: block;
@@ -170,6 +253,21 @@ h2 {
         max-width: 400px;
     }
 
+    .stuff {
+        flex-direction: column;
+    }
+   
+    .image img {
+        width: 100%;
+        margin: 0 auto;
+    }
+   
+    .information {
+        padding: 0 15px 0 15px;
+        flex-grow: 2;
+        max-width: 100%;
+    }
+
     /*https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
     .hamburger {
         display: block;
@@ -180,6 +278,7 @@ h2 {
         background-color: white;
         margin: 4px;
         transition: .8s;
+        -webkit-transition: .8s;
     }
 
     .change [role="Navigation"] {

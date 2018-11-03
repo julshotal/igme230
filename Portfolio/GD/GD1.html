@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Social Cause Posters</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">Dropdown</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="../WnM/WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">Genetic Algorithm</h1>
+        <p class="intro">click on the image below to view the live page</p>
+        
+        <div class="stuff">
+        <div class="image">
+                <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+                <img class="slide" src="../images/poster1.png" alt="Poster1">
+                <img class="slide" src="../images/poster2.png" alt="Poster2">
+                <img class="slide" src="../images/poster3.png" alt="Poster3">
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>This program uses a base genetics class that generates bit-based chromosomes to create grids of moving pixel patterns called hue grids.
+                Each chromosome contains bits for color range, pattern type, and cell size. These bits then are used to make up a virtual chromosome
+                which can be mutated by flipping a bit, cut in half and spliced with the chromosome of another hue grid, or replaced by a more fit grid.
+                An array of nine of these grids fills the canvas, and forms the first generation. From here, hovering over a grid and typing "+" raises
+                it's fitness value and typing "-" lowers it. Then, a new generation can be bred from the most fit individuals, which may be repeated until
+                the user is happy with the generational results.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project was created with JavaScript using p5.js libraries.</p>
+
+            <h3>Challenges</h3>
+            <p>The biggest challenges with this project came from counting bits, as to create a chromosome you have to keep track of each bit and 
+                have the calculated total stay updated for each new piece of genetic information. Also, unexpected patterns resulted in the grids
+                which had their RGB range restricted by the color bits in their chromosome.
+            </p>
+
+            <button><a href="https://github.com/julshotal/GA_IGME102">View Code</a></button>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+         let slideNum= 0;
+         rotateThrough();
+
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                }
+
+                slideNum++;
+
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
+
+                slides[slideNum-1].style.display = "block"; 
+                setTimeout(rotateThrough, 5000);
+            }
+
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>
