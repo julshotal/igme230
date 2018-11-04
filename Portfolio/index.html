@@ -31,7 +31,7 @@
 
         <!--<img class="bee" src="images/bee.svg" alt="bee">-->
 
-        <div class="container" onclick="turnX()">
+        <div class="container" onclick="turnX(this)">
             <div class="hamburger"></div>
             <div class="hamburger"></div>
             <div class="hamburger"></div>
@@ -41,7 +41,9 @@
       
     <script>
 
-        function turnX(x) {
+        function turnX(h) {
+            h.classList.toggle("change");
+
             var x = document.getElementsByClassName("dropdown");
             for(let i = 0; i < x.length; i++) {
 
