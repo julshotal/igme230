@@ -12,17 +12,17 @@
 
 <body class="content">
     <div class ="wrapper">
-        <div class="dropdown">
+        <div class="dropdownCNT">
             <button onclick="myFunction()" class="drop">My Work</button>
             <div id="dropdown" class="dropdown-content">
-            <a href="JS/JavaScript.html">JavaScript</a>
-            <a href="CSharp/CSharp.html">C#</a>
-            <a href="WnM/WebMobile.html">Web and Mobile</a>
-            <a href="GD/GraphicDesign.html">Graphic Design</a>
+            <a href="../JS/JavaScript.html">JavaScript</a>
+            <a href="../CSharp/CSharp.html">C#</a>
+            <a href="WebMobile.html">Web and Mobile</a>
+            <a href="../GD/GraphicDesign.html">Graphic Design</a>
             </div>
-        <button><a href="ContactMe.html">Contact Me</a></button>
-        <button><a href="Resume.html">Resume</a></button>
-        <button><a href="AboutSite.html">About This Site </a></button>
+        <button><a href="../ContactMe.html">Contact Me</a></button>
+        <button><a href="../Resume.html">Resume</a></button>
+        <button><a href="../AboutSite.html">About This Site </a></button>
         </div>
     
         
@@ -67,7 +67,7 @@
             function turnX(h) {
                 h.classList.toggle("change");
         
-                var x = document.getElementsByClassName("dropdown");
+                var x = document.getElementsByClassName("dropdownCNT");
                 for(let i = 0; i < x.length; i++) {
         
                     if (x[i].style.display === "block") {

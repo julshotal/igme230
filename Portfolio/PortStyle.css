@@ -438,21 +438,22 @@ h2 {
         margin: 0 auto;
     }
 
-    .dropdown {
+    .dropdown, .dropdownCNT {
         display: none;
+        order: 4;
         width: 100%;
         position: relative;
         z-index: 1;
     }
 
-    .dropdown button {
+    .dropdown button, .dropdownCNT button {
         margin: 5px 0px 10px 5px;
         text-align: center;
         background-color: rgba(225, 225, 225, .9);
         color: #c4285b;
     }
 
-    .dropdown a {
+    .dropdown a, .dropdownCNT a {
         padding-left: 0px;
         color: #c4285b;
     }
