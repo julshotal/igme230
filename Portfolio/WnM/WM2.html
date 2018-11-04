@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Launchpad</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="../JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">Launchpad Site</h1>
+        <p class="intro">click on the image below to view the live page</p>
+        
+        <div class="stuff">
+        <div class="image">
+            <a href="https://julshotal.github.io/igme230/"><img src="../images/launchpad.png" alt="Launchpad"></a>
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>This site serves as a launchpage for all my in-class exercises and projects for Web Design and Implementation (IGME 230).
+                It needed to have an image of me, as well as links for all the exercises and projects so they're easily accessible.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project uses HTML5 and CSS, and was uploaded to GitHub Pages</p>
+
+            <h3>Challenges</h3>
+            <p>Orginally, the "pop" animation on the circular links wasn't isolated and happend to all of them at once. This was fixed
+                using the ":nth-child()" selector to add more of a delay to each child, causing them to pop into place one at a time. 
+                Also, the circles were all different sizes based on the title size of the exercise, and the rows became staggered when
+                these titles wrapped or got too long. To fix this, each link was put into an unordered list and flexbox was used to
+                keep them aligned.
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>

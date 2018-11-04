@@ -362,4 +362,8 @@ h2 {
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    .quicklinks {
+        text-align: center;
+    }
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Research Site</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="../JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">Research Site: Wearable Technology</h1>
+        <p class="intro">click on the image below to view the live page</p>
+        
+        <div class="stuff">
+        <div class="image">
+            <a href="https://people.rit.edu/jgh6364/igme110/2017project/index.html"><img src="../images/wearTech.png" alt="Research Homepage"></a>
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>This site was created around a research paper I wrote about the current state of wearable technology, in which I argued wearable technology
+                has not quite reached it's full potential, while also arguing about privacy issues and other concerns. The site contains an introduction page,
+                three pages containing the main arguements, and a sources page for all research used in the paper and on the site. 
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project uses HTML5 and CSS, and was uploaded to the banjo.rit.edu server using FileZilla</p>
+
+            <h3>Challenges</h3>
+            <p>This site was made with only a week's experience using HTML and CSS</p>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>

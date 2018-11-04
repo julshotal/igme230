@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: File IO</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="../JavaScript.html">JavaScript</a>
+              <a href="CSharp.html">C#</a>
+              <a href="../WnM/WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">File IO Application</h1>
+        <p class="intro"></p>
+        
+        <div class="stuff">
+        <div class="image">
+            <img src="../images/fileIO.png" alt="File IO">
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>The main objective of this application was to use a File IO to read and write to a text file. It had five requirements, it had to
+                start by reading a file, allow the user to add to the resulting list, remove from the list, display the list, and then end the 
+                program and re-write the text file with the new information. My application reads a text file of a movie script, then prompts the 
+                user to edit the text file before typing "END" to write the new text to the file and close.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project was created with C# in Visual Studio 2017</p>
+
+            <h3>Challenges</h3>
+            <p>The most difficult part of this assignment was catching any exceptions or errors that could break the program, such as there
+            being no file to read or the user typing invalid input. This was handled using try, catch, and finally (exception handlers), and 
+            some conditionals. 
+            </p>
+
+            <button><a href="https://github.com/BakerIGM/pe-18-julshotal">View Code</a></button>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>
