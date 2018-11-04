@@ -69,17 +69,21 @@
                 setTimeout(rotateThrough, 5000);
             }
 
-            function turnX(x) {
-            x.classList.toggle("change");
-
-            var x = document.getElementById("dropdown");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            function turnX(h) {
+                h.classList.toggle("change");
+        
+                var x = document.getElementsByClassName("dropdown");
+                for(let i = 0; i < x.length; i++) {
+        
+                    if (x[i].style.display === "block") {
+                         x[i].style.display = "none";
+                    } else {
+                        x[i].style.display = "block";
+                    }
+        
+                }
             }
-        }
-
+    
        function myFunction() {
             document.getElementById("dropdown").classList.toggle("show");
         }
