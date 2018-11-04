@@ -32,10 +32,7 @@
         
         <div class="stuff">
         <div class="image">
-                <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
-                <img class="slide" src="../images/poster1.png" alt="Poster1">
-                <img class="slide" src="../images/poster2.png" alt="Poster2">
-                <img class="slide" src="../images/poster3.png" alt="Poster3">
+                <object width="400" height="600" data="/images/DD.pdf"></object>
         </div>
 
         <div class="information">
@@ -53,9 +50,10 @@
                 </li>
             </p>
 
-            <p>Hexagons
-                 <li> The hexagons throughout the site were extremely difficult to work with, as it's not a shape CSS enjoys creating, leading
-                     me to try and experiment with both images and SVG versions. 
+            <p>Hamburger Menu
+                 <li> The hamburger menu was difficult to set up with my dropdown menu, as the normal navbar had to drop down but still also
+                     have the dropdown contained within the "My Work" button. I'm still working on stopping it from shifting other elements 
+                     and tweaking alignment.
                  </li>
             </p>
             
@@ -63,6 +61,16 @@
             <h3>Above and Beyond</h3>
             <p>QR Code 
                 <li>I added a QR code that links to this site into my online resume, so when printed the link to my portfolio can still be easily accessed.</li>
+            </p>
+
+            <p>SVG Background
+                <li>For the main page's background, I created the colored triangle with a SVG. This keeps the edge sharp and helped me scale the background image
+                    to fit my content more.
+                </li>
+            </p>
+
+            <p>Animation 
+                <li>Animation was added to my image on the main page and on the hamburger menu just for something extra and fun.</li>
             </p>
 
             <h3>Sources</h3>
@@ -91,26 +99,6 @@
     </div>
 
         <script>
-         let slideNum= 0;
-         rotateThrough();
-
-            function rotateThrough() {
-                let slides = document.getElementsByClassName("slide");
-
-                for (let i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none"; 
-                }
-
-                slideNum++;
-
-                if (slideNum > slides.length) {
-                    slideNum = 1;
-                } 
-
-                slides[slideNum-1].style.display = "block"; 
-                setTimeout(rotateThrough, 5000);
-            }
-
             function turnX(h) {
                 h.classList.toggle("change");
         
