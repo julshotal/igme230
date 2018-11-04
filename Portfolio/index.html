@@ -31,29 +31,27 @@
 
         <!--<img class="bee" src="images/bee.svg" alt="bee">-->
 
-        <div class="container" onclick="turnX(this)">
+        <div class="container" onclick="turnX()">
             <div class="hamburger"></div>
             <div class="hamburger"></div>
             <div class="hamburger"></div>
         </div>
 </div> 
 
-<!--<div class="hex">
-        <img class="hexagon" src="images/hexagon.png" alt="hexagon">
-        <img class="hexagon" src="images/hexagon.png" alt="hexagon">
-        <img class="hexagon" src="images/hexagon.png" alt="hexagon">
-
-        <img class="hexagon1" src="images/hexagon.png" alt="hexagon">
-        <img class="hexagon1" src="images/hexagon.png" alt="hexagon">
-        <img class="hexagon1" src="images/hexagon.png" alt="hexagon">
- </div>-->
-
       
     <script>
 
         function turnX(x) {
-            x.classList.toggle("change");
-            document.getElementById("dropdown").classList.toggle("show");
+            var x = document.getElementsByClassName("dropdown");
+            for(let i = 0; i < x.length; i++) {
+
+                if (x[i].style.display === "block") {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "block";
+                }
+
+            }
         }
 
        function myFunction() {

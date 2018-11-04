@@ -400,10 +400,6 @@ h2 {
         transform: rotate(45deg) translate(-5px, -8px);
     }
 
-    .dropdown {
-        display: none;
-      }
-
     h1 {
         order: 1;
         text-align: left;
@@ -432,14 +428,26 @@ h2 {
         font-size: 40px;
         margin: 0 auto;
     }
-   
-    .dropdownCNT {
+
+    .dropdown {
         display: none;
-        order: 1;
-        margin: 0 auto;
-        padding: 20px 0px 15px 0px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
     }
-   
+
+    .dropdown button {
+        margin: 5px 0px 10px 5px;
+        text-align: center;
+        background-color: rgba(225, 225, 225, .9);
+        color: #c4285b;
+    }
+
+    .dropdown a {
+        padding-left: 0px;
+        color: #c4285b;
+    }
+
     .intro {
         order: 3;
         color: white;
