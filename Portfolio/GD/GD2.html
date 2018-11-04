@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Literal Typography</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="../WnM/WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">Literal Typography</h1>
+        <p class="intro"></p>
+        
+        <div class="stuff">
+        <div class="image">
+                <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+                <img class="slide" src="../images/typo1.png" alt="Poster1">
+                <img class="slide" src="../images/typo2.png" alt="Poster2">
+                <img class="slide" src="../images/typo3.png" alt="Poster3">
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>For this project, I had to choose three words to create "literal typography". The word was written in a appropiate font,
+                and then edited and added to until it clearly displays the definition. For example, the word "Melt" is melting like a 
+                candle that is burning down. Things to consider for this project was the chosen font, capitalization, how well the definition
+                is conveyed, and general aesthetics.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project was created using Adobe Illustrator.</p>
+
+            <h3>Sources</h3>
+            <p>The flame for melt and the gun are from <a href="https://thenounproject.com/">The Noun Project</a>
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+         let slideNum= 0;
+         rotateThrough();
+
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                }
+
+                slideNum++;
+
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
+
+                slides[slideNum-1].style.display = "block"; 
+                setTimeout(rotateThrough, 5000);
+            }
+
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>

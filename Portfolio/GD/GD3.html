@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Logo Design</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <button><a href="../index.html">Home</a></button>
+            <button onclick="myFunction()" class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+              <a href="JavaScript.html">JavaScript</a>
+              <a href="../CSharp/CSharp.html">C#</a>
+              <a href="../WnM/WebMobile.html">Web and Mobile</a>
+              <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+          <button><a href="../ContactMe.html">Contact Me</a></button>
+          <button><a href="../Resume.html">Resume</a></button>
+          <button><a href="../AboutSite.html">About This Site </a></button>
+        </div>
+    
+        
+        <h1 class="contenthead">Logo Design</h1>
+        <p class="intro"></p>
+        
+        <div class="stuff">
+        <div class="image">
+                <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+                <img class="slide" src="../images/logo5.png" alt="Logos">
+                <img class="slide" src="../images/logo4.png" alt="Logos">
+                <img class="slide" src="../images/logo6.png" alt="Logos">
+                <img class="slide" src="../images/logo.png" alt="Logos">
+                <img class="slide" src="../images/logo2.png" alt="Logos">
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>The goal of this project was to take a photograph and then simply it down to a simple, black logo design for a company.
+                I started with the idea of an athletic swimsuit company, and a photograph of a jellyfish. Then, I drew the jellyfish
+                in Illustrator following the photograph but simplifying it slightly. Next, it needed to be simplified more so it was less
+                a jellyfish and more a symbol that resembled a jellyfish. Also, I began applying the faux company's style to it, such as 
+                curling the tentacles more and added a wave pattern into the body portion. Finally, different font combinations were tested
+                until I settled on one for the final logo.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project was created using Adobe Illustrator, with initial sketches done traditionally.</p>
+
+            <h3>Challenges</h3>
+            <p>The largest challenge of this project was dealing with the company and "client" I had come up with. I had to constantly think
+                of and apply the feeling I wanted to portray of a modern, dynamic company. 
+            </a>
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+         let slideNum= 0;
+         rotateThrough();
+
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                }
+
+                slideNum++;
+
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
+
+                slides[slideNum-1].style.display = "block"; 
+                setTimeout(rotateThrough, 5000);
+            }
+
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
+</body>
+</html>
