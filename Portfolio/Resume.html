@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Julia Hotaling's Portfolio: Documentation Page</title>
 </head>
 
-<body>
+<body class="content">
+    <div id="noPrint">
     <div class="wrapper">
-        <div class="dropdown">
+        <div class="dropdownCNT">
             <button><a href="index.html">Home</a></button>
             <button onclick="myFunction()" class="drop">My Work</button>
             <div id="dropdown" class="dropdown-content">
@@ -25,21 +26,78 @@
           <button><a href="Resume.html">Resume</a></button>
           <button><a href="AboutSite.html">About This Site </a></button>
         </div>
+    
+        
+        <h1 class="contenthead">Resume</h1>
+        
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
 
-            <h1>Resume</h1>
-
-            <div class="container" onclick="turnX(this)">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
+        <div id="print">
+            <button><a href="#" onclick="window.print();return false;">Print</a></button>
+        </div>
     </div>
 
-    
+        <div id="resume">
+            <h1>JULIA HOTALING</h1>
+            <h2>(301) 401-0999 | jgh6364@g.rit.edu | https://github.com/julshotal</h2>
 
-    <script>
+            <p id="search">Seeking a full-time 10-12 week internship, starting May 2018, with a focus on interactivity, collaboration, and development.</p>
+
+            <h3>EDUCATION</h3>
+            <h4>Rochester Institute of Technology</h4>
+            <p>GPA: 3.93	|	Bachelor of Science, New Media Interactive Development</p>
+            <ul>
+                <li>Dean’s List (2017 – Present)</li>
+                <li>RIT Founder’s Scholarship</li>
+            </ul>
+
+            <h3>SKILLS</h3>
+            <ul>
+                <li>JavaScript | p5 libraries | C# | HTML5 | CSS | Git | Adobe Photoshop | Adobe Illustrator | Time Management | Communication | Collaboration</li>
+            </ul>
+
+            <h3>PROJECTS</h3>
+            <h4>So You Think You're a 90's Kid</h4>
+            <p>Women in Computing Hackathon 2018 | Jan 2018</p>
+            <ul>
+                <li>Used JavaScript and p5 libraries to code a 90’s style arcade style game in under 24 hours </li>
+                <li>Worked to develop the game alongside a co-developer, a web designer, and a graphic artist</li>
+            </ul>
+
+            <h3>WORK EXPERIENCE</h3>
+            <h4>Area Office Assistant</h4>
+            <p>Residence Life RIT | Jan 2018 - Present | Rochester, NY</p>
+            <ul>
+                <li>Provide assistance to the Ellingson Residence Life office, Resident Assistants, Resident Coordinators, and students living in RIT housing.</li>
+            </ul>
+
+            <h4>Independent Contractor</h4>
+            <p>Critter Sitter | Jun 2018 - Aug 2018 | New Market, MD</p>
+            <ul>
+                <li>Cared for pets ranging from small animals to large dogs in their own homes.</li>
+                <li>Responsible for starting and ending every visit on time, and following every instruction laid out by pet owners to ensure their pets got the best care possible while they were away.</li>
+                <li>House keys and codes were kept safe, confidential, and secure.</li>
+                <li>Updated an application called LeashTime to show arrival and departure time, as well as left small notes each visit detailing care and anything else of note.</li>
+            </ul>
+
+            <h4>Youth Volleyball Coach</h4>
+            <p>Frederick Parks and Recreation | Jun 2018 - Aug 2018 | Frederick, MD</p>
+            <ul>
+                <li>Coached elementary to high school aged girls looking to improve their volleyball skills.</li>
+                <li>Worked with beginner, intermediate, and advanced players to help each girl reach her goals; whether that was recreational play, improving skills for club teams, or preparing for high school tryouts.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+        <script>
+
         function turnX(x) {
-            x.classList.toggle("change");
+        x.classList.toggle("change");
 
             var x = document.getElementById("dropdown");
             if (x.style.display === "block") {
@@ -67,6 +125,6 @@
             }
         }
         }
-    </script>
+        </script>
 </body>
 </html>

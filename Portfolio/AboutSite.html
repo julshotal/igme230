@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Julia Hotaling's Portfolio: Documentation Page</title>
 </head>
 
-<body>
-    <div class="wrapper">
-        <div class="dropdown">
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
             <button><a href="index.html">Home</a></button>
             <button onclick="myFunction()" class="drop">My Work</button>
             <div id="dropdown" class="dropdown-content">
@@ -25,42 +25,117 @@
           <button><a href="Resume.html">Resume</a></button>
           <button><a href="AboutSite.html">About This Site </a></button>
         </div>
-
-            <h1>About This Site</h1>
-
-            <p class="intro">click on the preview for full images</p>
+    
         
-            
-            <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
-            <a href="JS1.html"><img class="slide" src="images/place1.jpg" alt="Genetic Algorithm"></a>
-            <a href="JS2.html"><img class="slide" src="images/place2.jpg" alt="Click and Point Game"></a>
-            <a href="JS3.html"><img class="slide" src="images/place3.jpg" alt="Arcade Game"></a>
-
-            <div class="container" onclick="turnX(this)">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
+        <h1 class="contenthead">About This Site</h1>
+        <p class="intro">Documentation page</p>
+        
+        <div class="stuff">
+        <div class="image">
+                <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+                <img class="slide" src="../images/poster1.png" alt="Poster1">
+                <img class="slide" src="../images/poster2.png" alt="Poster2">
+                <img class="slide" src="../images/poster3.png" alt="Poster3">
         </div>
-            <script>
-               let slideNum= 0;
-               rotateThrough();
+
+        <div class="information">
+            <h3>Challenges</h3>
+            <p>Dropdown Menus
+                    <li>I had trouble with both the web dropdown and the hamburger dropdown menus displaying on their respective pages.
+                        I used a w3schools tutorial to help me build the web version the way I wanted, and then used the function I already
+                        had for the mobile hamburger menu to display the links so the dropdown still worked on mobile as well
+                    </li></p>
+
+            <p>Mobile Version
+                <li>With the mobile version of my site, I searched common dimensions of mobile browsers. However, these numbers were often
+                    very differently making it difficult to pick the width at which the site collapses into it's mobile form. As I have not
+                    yet implemented a version for tablets, I went with a larger width to try and cover most common mobile dimensions. 
+                </li>
+            </p>
+
+            <p>Hexagons
+                 <li> The hexagons throughout the site were extremely difficult to work with, as it's not a shape CSS enjoys creating, leading
+                     me to try and experiment with both images and SVG versions. 
+                 </li>
+            </p>
             
-                function rotateThrough() {
-                    let slides = document.getElementsByClassName("slide");
-                           
-                    for (let i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none"; 
-                    }
-            
-                    slideNum++;
-            
-                    if (slideNum > slides.length) {
-                         slideNum = 1;
-                    } 
-            
-                    setTimeout(rotateThrough, 5000);
+
+            <h3>Above and Beyond</h3>
+            <p></p>
+
+            <h3>Sources</h3>
+            <p>
+                <div class="quicklinks">
+                    <button><a href="https://fonts.google.com/specimen/Lato">Lato Font</a></button>
+                    <button><a href="https://fonts.google.com/specimen/Montserrat">Montserrat Font</a></button>
+                    <button><a href="https://www.w3schools.com/howto/howto_js_dropdown.asp">Dropdown Menu</a></button>
+                    <button><a href="https://www.w3schools.com/howto/howto_css_menu_icon.asp">Hamburger Menu Animation</a></button>
+                    <button><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow</a></button>
+                </div>
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container" onclick="turnX(this)">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+         let slideNum= 0;
+         rotateThrough();
+
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
                 }
-            </script>
+
+                slideNum++;
+
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
+
+                slides[slideNum-1].style.display = "block"; 
+                setTimeout(rotateThrough, 5000);
+            }
+
+            function turnX(x) {
+            x.classList.toggle("change");
+
+            var x = document.getElementById("dropdown");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+       function myFunction() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.drop')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+        </script>
 </body>
 </html>
