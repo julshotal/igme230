@@ -1,4 +1,8 @@
 
+html {
+    max-width: 1000px;
+}
+
 /*apply background image just to the homepage*/
 body.home {
     background-image: url("images/triangle.svg");
