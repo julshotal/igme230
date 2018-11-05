@@ -113,8 +113,11 @@ body.content {
  }
 
  /*button formatting for the slideshow galleries, view code buttons, and buttons on the about site page*/
- .information button, .quicklinks button {
-     margin-top: 15px;
+ .information .button, .quicklinks .button {
+     position: relative;
+     display: inline-block;
+     margin: 15px 5px 15px 5px;
+     padding: 5px 5px 5px 5px;
      background-color: #dedede;
      font-family: 'Montserrat', sans-serif;
      color: #c4285b;
@@ -123,7 +126,7 @@ body.content {
  }
 
  /*hover formatting for the light gray buttons*/
- .information button:hover, .quicklinks button:hover {
+ .information .button:hover, .quicklinks .button:hover {
     margin-top: 15px;
     background-color: #c4285b;
     font-family: 'Montserrat', sans-serif;
@@ -165,17 +168,18 @@ body.content {
 }
 
 /*formatting for buttons and their links*/
-button, button a {
+.button, .button a, button {
     border: none;
     background-color: #c4285b;
     color: white;
     text-decoration: none;
     font-size: 20px;
+    padding: 5px 15px 5px 15px;
     font-family: 'Montserrat', sans-serif;
 
 }
 
-button a {
+.button a {
     padding: 0px 10px 0px 10px;
 }
 
@@ -243,20 +247,24 @@ h2 {
 }
 
 /*print button formatting for resume page, and hover effects*/
+
+#print button {
+    background-color: #dedede;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: .8s;
+    transition: .8s;
+    color: #941e46
+}
+
 #print {
     margin-left: 25%;
     margin-top: 120px;
     text-align: center;
     order: 3;
     width: 80px;
-    background-color: #dedede;
-    font-family: 'Montserrat', sans-serif;
-    color: #c4285b;
-    -webkit-transition: .8s;
-    transition: .8s;
 }
 
-#print:hover {
+#print button:hover {
     background-color: #c4285b;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -560,18 +568,15 @@ h2 {
         width: 100%;
     }
 
-    .dropdown button, .dropdownCNT button {
-        margin: 5px 0px 2px 5px;
+    .dropdown .button, .dropdownCNT .button, .dropdown button, .dropdownCNT button {
+        display: inline-block;
+        margin: 10px 0px 2px 10px;
         text-align: center;
         background-color: rgba(225, 225, 225, .9);
         color: #c4285b;
     }
 
-    .dropdown ul, .dropdownCNT ul {
-        list-style-type: none;
-    }
-
-    .dropdown li, .dropdownCNT li {
+    .dropdown a, .dropdownCNT a {
         padding-left: 0px;
         color: #c4285b;
     }
