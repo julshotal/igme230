@@ -567,7 +567,11 @@ h2 {
         color: #c4285b;
     }
 
-    .dropdown a, .dropdownCNT a {
+    .dropdown ul, .dropdownCNT ul {
+        list-style-type: none;
+    }
+
+    .dropdown li, .dropdownCNT li {
         padding-left: 0px;
         color: #c4285b;
     }
