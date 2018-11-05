@@ -442,6 +442,7 @@ h2 {
 
     .altImage {
         display: flex;
+        margin-top: 100px;
     }
    
     .image img, .altImage img {
@@ -572,6 +573,12 @@ h2 {
 
     #resume {
         width: 80%;
+    }
+
+    #print {
+        margin-left: 20%;
+        order: 5;
+        width: 90px;
     }
 
     .about .information {
