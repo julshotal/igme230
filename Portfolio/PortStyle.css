@@ -100,14 +100,18 @@ body.content {
      color: #c4285b;
  }
 
- .information p, .information li {
+ .information .sub, .information p {
      font-family: 'Montserrat', sans-serif;
      font-size: 15px;
      color: #941e46;
  }
 
- .information li {
-    list-style: none;
+ .information .sub {
+     padding-bottom: 2px;
+     border-bottom: 2px dashed #dedede;
+ }
+
+ .information p {
     margin-left: 20px;
     margin-bottom: 5px;
  }
