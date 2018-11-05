@@ -87,7 +87,6 @@ body.content {
  .information {
      padding-right: 40px;
      flex-grow: 2;
-     align-content: left;
      padding-top: 90px;
      max-width: 60%;
      order: 2;
@@ -277,7 +276,7 @@ h2 {
 /*formatting for entire resume block to center on page and restrict width*/
 #resume {
     width: 50%;
-    max-width: 4960;
+    max-width: 4960px;
     border: 2px solid #dedede;
     padding: 10px 10px 10px 10px;
     margin: 0 auto;
@@ -656,11 +655,6 @@ h2 {
 }
 
 /*print settings*/
-/*print resume out onto a regular portrait oriented sheet of paper*/
-@page {
-    size: A4 portrait;
-}
-
 /*hide the background/text/etc, only print the block of resume content and nothing else*/
 @media print {
     .wrapper {
