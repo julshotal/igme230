@@ -65,6 +65,7 @@
     </div>
 
         <script>
+        //code to rotate through slideshow images and descriptions
          let slideNum= 0;
          rotateThrough();
 
@@ -84,7 +85,7 @@
                 slides[slideNum-1].style.display = "block"; 
                 setTimeout(rotateThrough, 5000);
             }
-
+        //hamburger menu + toggling dropdown visibility  
         function turnX(h) {
             h.classList.toggle("change");
     
@@ -99,7 +100,8 @@
     
             }
         }
-
+        
+        //dropdown
        function myFunction() {
             document.getElementById("dropdown").classList.toggle("show");
         }

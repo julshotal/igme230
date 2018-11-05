@@ -1,4 +1,5 @@
 
+/*apply background image just to the homepage*/
 body.home {
     background-image: url("images/triangle.svg");
     min-width: 1210px;
@@ -6,11 +7,13 @@ body.home {
     background-repeat: no-repeat;
 }
 
+/*rectangle header background for all pages except index*/
 body.content {
      background-image: url("images/bg.png");
      background-repeat: no-repeat;
  }
 
+ /*custom scrollbars for web version*/
  ::-webkit-scrollbar {
     width: 15px;
 }
@@ -33,6 +36,7 @@ body.content {
     background: #941e46; 
 }
 
+/*format the h1 of all pages except index.html*/
  .contenthead {
      order: 2;
      text-align: center;
@@ -40,12 +44,14 @@ body.content {
      margin: 0 auto;
  }
 
+ /*dropdown menu for all content pages, centered instead of left align like the index nav bar*/
  .dropdownCNT {
      order: 1;
      margin: 0 auto;
      padding: 20px 0px 15px 0px;
  }
 
+ /*p element that goes with the h1 on content pages*/
  .intro {
      order: 3;
      color: white;
@@ -56,12 +62,14 @@ body.content {
      padding: 15px 0 0 0;
  }
 
+ /*aligns the image and informational content on specific project pages*/
  .stuff {
      order: 4;
      display: flex;
      flex-direction: row;
  }
 
+ /*content pages place the image to the left, which can only grow to become 500px*/
  .image, #pdf, .altImage {
      flex-direction: row;
      padding-top: 110px;
@@ -74,6 +82,8 @@ body.content {
      max-width: 500px;
  }
 
+ /*text information for content pages goes to the right, width restricted so it sits next to
+ the image at full size*/
  .information {
      padding-right: 40px;
      flex-grow: 2;
@@ -83,6 +93,7 @@ body.content {
      order: 2;
  }
 
+ /*formatting for the headers and content for the information side*/
  .information h3 {
      font-family: 'Lato', sans-serif;
      font-size: 20px;
@@ -101,6 +112,7 @@ body.content {
     margin-bottom: 5px;
  }
 
+ /*button formatting for the slideshow galleries, view code buttons, and buttons on the about site page*/
  .information button, .quicklinks button {
      margin-top: 15px;
      background-color: #dedede;
@@ -110,6 +122,7 @@ body.content {
      transition: .8s;
  }
 
+ /*hover formatting for the light gray buttons*/
  .information button:hover, .quicklinks button:hover {
     margin-top: 15px;
     background-color: #c4285b;
@@ -117,17 +130,20 @@ body.content {
     color: white;
 }
 
+/*center slideshows on the gallery pages*/
  .slideshow {
      order: 4;
      margin: 0 auto;
      padding-top: 100px;
  }
 
+ /*add a border and box shadow to slideshows on gallery pages*/
  .slideshow img{
     border: 1px solid lightgrey;
     box-shadow: 5px 10px lightgrey;
  }
 
+ /*formatting for small project descriptions on gallery pages*/
  .slideshow p {
     margin-top: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -136,19 +152,22 @@ body.content {
     text-align: center;
 }
 
+/*buttons for viewing code, sources, and to projects from the gallery pages*/
 .quicklinks {
     order: 5;
     margin: 0 auto;
 }
 
+/*set all content (nav bar, h1, and h2) to a flexbox and stack them on top of each other*/
 .wrapper {
     display: flex;
     flex-direction: column;
 }
 
+/*formatting for buttons and their links*/
 button, button a {
     border: none;
-    background-color: transparent;
+    background-color: #c4285b;
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -160,11 +179,7 @@ button a {
     padding: 0px 10px 0px 10px;
 }
 
-svg {
-    height: 5%;
-    width: 5%;
-}
-
+/*formatting for h1 element on the index page*/
 h1 {
     order: 1;
     align-self: flex-start;
@@ -174,6 +189,7 @@ h1 {
     margin-left: 40px;
 }
 
+/*formatting for the "code compelling experiences" h2 and my picture*/
 #things {
     width: 100%;
     order: 3;
@@ -194,6 +210,7 @@ h2 {
     margin-right: 20%;
 }
 
+/*don't worry about it*/
 /*#hex {
     order: 3;
     background-image: url("images/hexagonW.png");
@@ -212,6 +229,7 @@ h2 {
     padding: 0px 30px 0px 200px;
 }*/
 
+/*apply animation to the myface div, div is empty but once height is set a background image can be applied*/
 #myface {
     order: 1;
     background-image: url("images/hexagon.png");
@@ -221,9 +239,10 @@ h2 {
     margin-left: 10%;
     padding: 0px 30px 0px 200px;
     transition: .8s;
-    animation: turn 1s linear 2s 1 forwards;
+    animation: turn 1s linear 1s 1 both;
 }
 
+/*print button formatting for resume page, and hover effects*/
 #print {
     margin-left: 25%;
     margin-top: 120px;
@@ -243,6 +262,7 @@ h2 {
     color: white;
 }
 
+/*formatting for entire resume block to center on page and restrict width*/
 #resume {
     width: 50%;
     max-width: 4960;
@@ -253,11 +273,13 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*QR code image on resume*/
 #resume img {
     margin-left: 42%;
     width: 100px;
 }
 
+/*formatting for each indivdual part of the resume*/
 #resume h1 {
     font-size: 26px;
     border-bottom: 3px solid #c4285b;
@@ -299,10 +321,13 @@ h2 {
     padding-bottom: 10px;
 }
 
+/*hides the slideshow for the doc page, as its not needed for the web version*/
 .altImage {
     display: none;
 }
 
+/*formatting for contact page*/
+/*use flex row to put links to the left and about me to the right*/
 .about {
     order: 4;
     display: flex;
@@ -313,11 +338,11 @@ h2 {
 .about .information {
     order: 2;
     width: 50%;
-    margin: 50px 0px 20px 50px;
+    margin: 50px 10px 20px 50px;
 }
 
 .about .links {
-    margin: 150px 50px 20px 50px;
+    margin: 150px 60px 20px 50px;
     order: 1;
 }
 
@@ -325,12 +350,8 @@ h2 {
     list-style: none;
 }
 
-.about .links p {
-    padding: 5px 5px 5px 5px;
-    background-color: #dedede;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: #c4285b;
+.links ul li {
+    padding: 10px 10px 10px 10px;
 }
 
 .about .links a {
@@ -342,8 +363,9 @@ h2 {
     -webkit-transition: .8s;
 }
 
+/*links enlarge slightly on hover*/
 .about .links a:hover {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 
@@ -360,7 +382,7 @@ h2 {
     cursor: cell;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* positioning for the dropdown content */
 .dropdown {
     order: 2;
     margin-top: 10px;
@@ -370,7 +392,7 @@ h2 {
     position: relative;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* formatting for hidden dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -381,7 +403,7 @@ h2 {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
+/*dropdown links */
 .dropdown-content a {
     color: #c4285b;
     transition: .8s;
@@ -394,30 +416,35 @@ h2 {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #c4285b; color: white; border: 1px dashed white;}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* Show the dropdown menu, called via javascript onclick */
 .show {display:block;}
 
+/*turn animation for my picture on the index page*/
 @keyframes turn {
     100%{transform: rotateY(180deg); background-image: url('images/me.png');}
 }
 
 /*mobile devices*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
+   /*adjust size of background image for the index page*/
     body.home {
         background-size: 125%;
         min-width: 282px;
         max-width: 360px;
     }
 
+    /*switch to smaller bg image for the mobile content pages*/
     body.content {
         background-image: url(images/bg2.png);
     }
 
+    /*switch to a column layout to elements stack*/
     #things {
         order: 3;
         flex-direction: column;
     }
 
+    /*adjust image on front page*/
     #myface {
         order: 1;
         margin: 0 auto;
@@ -426,31 +453,35 @@ h2 {
         animation: turn 1s linear 1 forwards;
     }
 
+    /*hide embedded pdf on about page and replace w/ slideshow*/
     #pdf {
         display: none;
     }
 
+    /*restrict width of the wrapper div*/
     .wrapper {
-        display: flex;
-        flex-direction: column;
         max-width: 400px;
     }
 
+    /*change flexbox from rows to colums*/
     .stuff {
         flex-direction: column;
     }
 
+    /*make slideshow visible on the about page to replace the embedded pdf*/
     .altImage {
         display: flex;
         margin-top: 100px;
     }
    
+    /*format the image slideshows and images for mobile to fit the screen*/
     .image img, .altImage img {
         width: 100%;
         height: 100%;
         margin: 0 auto;
     }
    
+    /*adjust sizing of information text and image slideshow for mobile*/
     .information, .altImage {
         padding: 0 15px 0 15px;
         flex-grow: 2;
@@ -458,6 +489,7 @@ h2 {
     }
 
     /*https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
+    /*create hamburger icon using divs*/
     .hamburger {
         display: block;
         order: 1;
@@ -470,10 +502,7 @@ h2 {
         -webkit-transition: .8s;
     }
 
-    .change [role="Navigation"] {
-        display: flex;
-    }
-
+    /*Transformation to animate hamburger menu into a 'X' button when clicked*/
     .change .hamburger:nth-child(1) {
         -webkit-transform: rotate(-45deg);
         transform:rotate(-45deg) translate(-5px, 8px);
@@ -488,6 +517,7 @@ h2 {
         transform: rotate(45deg) translate(-5px, -8px);
     }
 
+    /*formatting changes for the h1 and h2 on the index page*/
     h1 {
         order: 1;
         text-align: left;
@@ -517,6 +547,7 @@ h2 {
         margin: 0 auto;
     }
 
+    /*hide all links and format dropdowns for smaller screen*/
     .dropdown {
         display: none;
         order: 1;
@@ -527,8 +558,6 @@ h2 {
         display: none;
         order: 4;
         width: 100%;
-        position: relative;
-        z-index: 1;
     }
 
     .dropdown button, .dropdownCNT button {
@@ -543,6 +572,8 @@ h2 {
         color: #c4285b;
     }
 
+
+    /*shrink intro text to fit head*/
     .intro {
         order: 3;
         color: white;
@@ -552,6 +583,7 @@ h2 {
         padding: 5px 0 0 0;
     }
    
+    /*center and shrink/wrap slideshow and descriptive text*/
     .slideshow img {
         order: 4;
         width: 100%;
@@ -567,14 +599,18 @@ h2 {
         flex-wrap: wrap;
     }
 
+    /*align the quicklinks to the center*/
     .quicklinks {
         text-align: center;
     }
 
+    /*change width of entire resume to fit the screen but not hit the edges*/
     #resume {
         width: 80%;
     }
 
+    /*format print button so it stays with the resume block even when the dropdown
+    comes out*/
     #print {
         margin-left: 20%;
         text-align: left;
@@ -582,23 +618,37 @@ h2 {
         width: 90px;
     }
 
+    /*have the contact center, width 100%, and add backgrounds to the links and space them out + center them*/
     .about .information {
         width: 100%;
         margin: 5px 5px 5px 5px;
     }
 
     .about .links {
-        margin-top: 100px;
-        margin-left: 0px;
+        padding-top: 100px;
+        margin: 0 auto;
         text-align: center;
         order: 1;
     }
+
+    .about .links ul li {
+        width: 200px;
+        margin: 5px 0px 5px 0px;
+        background-color: #dedede;
+    }
+
+    .about {
+        margin: 0 auto;
+    }
 }
 
+/*print settings*/
+/*print resume out onto a regular portrait oriented sheet of paper*/
 @page {
     size: A4 portrait;
 }
 
+/*hide the background/text/etc, only print the block of resume content and nothing else*/
 @media print {
     .wrapper {
         display: none;

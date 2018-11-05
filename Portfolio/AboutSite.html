@@ -115,6 +115,7 @@
     </div>
 
         <script>
+            //hamburger menu + toggling dropdown visibility  
             function turnX(h) {
                 h.classList.toggle("change");
         
@@ -130,8 +131,9 @@
                 }
             }
 
-            let slideNum= 0;
-         rotateThrough();
+            //code to rotate through slideshow images and descriptions
+           let slideNum= 0;
+            rotateThrough();
 
             function rotateThrough() {
                 let slides = document.getElementsByClassName("slide");
@@ -150,7 +152,7 @@
                 setTimeout(rotateThrough, 5000);
             }
     
-
+         //dropdown menu toggling visibility
        function myFunction() {
             document.getElementById("dropdown").classList.toggle("show");
         }

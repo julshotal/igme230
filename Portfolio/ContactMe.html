@@ -34,13 +34,9 @@
             <div class="links">
                 <ul>
                     <li><a href="mailto:juliahotaling@gmail.com">Email</a></li>
-                        <p>juliahotaling@gmail.com</p>
                     <li><a href="https://rit.joinhandshake.com/users/6929479">Handshake</a></li>
-                        <p>https://rit.joinhandshake.com/users/6929479</p>
                     <li><a href="https://github.com/julshotal">GitHub</a></li>
-                        <p>julshotal and jgh6364</p>
                     <li><a href="https://www.linkedin.com/in/jgh999/">LinkedIn</a></li>
-                        <p>https://www.linkedin.com/in/jgh999/</p>
                 </ul>
             </div>
 
@@ -58,6 +54,7 @@
         </div>
 
         <script>
+        //code to rotate through slideshow images and descriptions
          let slideNum= 0;
          rotateThrough();
 
@@ -78,6 +75,7 @@
                 setTimeout(rotateThrough, 5000);
             }
 
+            //calls the animation for the hamburger menu and toggles the visibilities of the navigation links
             function turnX(h) {
                 h.classList.toggle("change");
         
@@ -93,6 +91,8 @@
                 }
             }
     
+            
+        //toggle the dropdown menu
        function myFunction() {
             document.getElementById("dropdown").classList.toggle("show");
         }
