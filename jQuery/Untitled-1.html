@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #panel1, #panel2 {
+            height: 200px;
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
+        #panel1 {
+            background-color: pink;
+            position: absolute;
+        }
+
+        #panel2 {
+            background-color: lavender;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+
+    <div id="panel1">
+        there is text here
+    </div>
+
+    <div id="panel2">
+        there is some more text here
+    </div>
+
+    <script>
+        $("#show").click(function() {
+            $("#panel1").show(500);
+        });
+
+        $("#hide").click(function() {
+            $("#panel1").hide(500);
+        });
+    </script>
+</body>
+</html>

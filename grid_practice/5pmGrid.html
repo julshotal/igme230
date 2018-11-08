@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Practice</title>
+
+    <style>
+        .myGrid {
+            display: grid;
+            grid-template-columns: 150px 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr 50px;
+            height: 100vh;
+        }
+
+        .myGrid div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lavenderblush;
+            border: 2px dotted plum;
+        }
+
+        .titlebar {
+            grid-column-start: 1;
+            /*grid-column-end: 4;*/
+            grid-column-end: -1; /*spans all the way to the end of the row even if another column is added*/
+            /*grid-column-end: span 3;*/
+
+            /*short cut
+            grid-column: 1 / span 3;*/
+        }
+
+        .sidebar {
+            grid-row: 2 / span 2;
+        }
+        
+        .footer {
+            grid-column: 1 / span 3;
+        }
+
+        .nav {
+            list-style-type: none;
+        }
+
+        .logo {
+            
+        }
+
+        .nav li {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="myGrid">
+        <div class="titlebar">
+            <span class="logo">logo</span>
+            <span class="name">A Name</span>
+            <ul class = "nav">
+                <li>link 1</li>
+                <li>link 2</li>
+                <li>link 3</li>
+            </ul>
+        </div>
+        <div class = "sidebar">Cell 2</div>
+        <div>Cell 3</div>
+        <div>Cell 4</div>
+        <div>Cell 5</div>
+        <div>Cell 6</div>
+        <div class = "footer">Cell 7</div>
+        <!--<div>Cell 8</div>
+        <div>Cell 9</div>
+        <div>Cell 10</div>
+        <div>Cell 11</div>
+        <div>Cell 12</div>-->
+    </div>
+</body>
+</html>
