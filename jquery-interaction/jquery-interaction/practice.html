@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="practicecss.css" type=text/css>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper" id="page1">
+        <h1>jQuery</h1>
+        <span class="open">o</span><span class="close">x</span>
+        <div class="slide">
+            <a href="#page2">blue</a>
+        </div>
+    </div>
+
+    <div class="wrapper" id="page2">
+        <h1>jQuery</h1>
+        <span class="open">o</span><span class="close">x</span>
+        <div class="slide">
+            <a href="#page1">red</a>
+        </div>
+    </div>
+
+    <script>  
+         //smooth scroll onclick 
+        $("a").click(function (event) {
+            event.preventDefault();
+            let target = $(this.hash);
+            $('html, body').animate({ scrollTop: target.offset().top }, 1000);
+        });
+        
+        $(".open").click(function () {
+            $(".slide").slideToggle("fast");
+            $(".open").toggle("fast");
+            $(".close").toggle("fast");
+        });
+
+        $(".close").click(function () {
+            $(".slide").slideToggle("fast");
+            $(".open").toggle("fast");
+            $(".close").toggle("fast");
+        });
+
+    </script>
+</body>
+</html>

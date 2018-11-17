@@ -304,6 +304,10 @@ instead of fading away, which is the circles that contains the link.*/
     animation: pop 1s 6.2s linear both;
 }
 
+#exercises li:nth-child(33){
+    animation: pop 1s 6.4s linear both;
+}
+
 
   /*This contains the frames for my pop animation. The frames are indicated by percentages, with 0 being the beginning and the 100% indicating
   the animation has run 100% of it's course. At 0%, the circles are scaled down. Then they scale up, and up again, then back down. This creates
