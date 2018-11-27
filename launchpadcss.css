@@ -173,8 +173,10 @@ instead of fading away, which is the circles that contains the link.*/
 }
 
 #projects li:nth-child(4){
-    animation: pop 1s 1s linear both;
+    animation: pop 1s 1.5s linear both;
 }
+
+/*-----------------------------------*/
 
 #exercises li:nth-child(1){
     animation: pop 1s linear both;
@@ -306,6 +308,10 @@ instead of fading away, which is the circles that contains the link.*/
 
 #exercises li:nth-child(33){
     animation: pop 1s 6.4s linear both;
+}
+
+#exercises li:nth-child(34){
+    animation: pop 1s 6.6s linear both;
 }
 
 
