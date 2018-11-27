@@ -1,0 +1,23 @@
+<p id="verse1">How happy is the spiky, fresh finfish!<br>
+Freshwater, fresh finfish.<br></p>
+
+
+<p id="verse2">A fresh finfish is high-pitched.<br> A fresh finfish is high,<br>
+A fresh finfish is peaky, however<br></p>
+
+
+<p id="verse3">A foreign fishermen, however hard it tries,<br>
+Will always be tired<br></p>
+
+
+<p id="verse4">Down, down, down into the darkness of the foreign fishermen,<br>
+Gently it goes - the haggard, the timeworn, the whacked<br></p>
+
+
+<p id="verse5">I cannot help but stop and look at the cunning, southern swordfish.<br>
+Never forget the knavish and attractive southern swordfish<br></p>
+
+
+<p id="verse6">Mature mackerel is, in its way, the sky of scombroid fish.<br>
+Does the mature mackerel make you shiver?<br>
+Does it?<br></p>
