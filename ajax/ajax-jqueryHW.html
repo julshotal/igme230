@@ -89,7 +89,6 @@
         $("#verse-choose").val(verse);
         $("#selectedverse").load(verseString);
 
-
         $("#verse-choose").change(function() {
             verseString = (poem + " #" + verse);
             verse = $(this).val();
