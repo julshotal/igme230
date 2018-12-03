@@ -172,10 +172,6 @@ instead of fading away, which is the circles that contains the link.*/
     animation: pop 1s 1s linear both;
 }
 
-#projects li:nth-child(4){
-    animation: pop 1s 1.5s linear both;
-}
-
 /*-----------------------------------*/
 
 #exercises li:nth-child(1){
