@@ -90,8 +90,8 @@
         $("#selectedverse").load(verseString);
 
         $("#verse-choose").change(function() {
-            verseString = (poem + " #" + verse);
             verse = $(this).val();
+            verseString = (poem + " #" + verse);
             $("#selectedverse").load(verseString); 
         });
         
