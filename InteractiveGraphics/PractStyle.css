@@ -4,4 +4,10 @@
 
     max-height: 100vh;
     max-width: 100vh;
+
+    display: grid;
+}
+
+header, .down {
+    position: absolute;
 }
