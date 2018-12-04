@@ -17,18 +17,29 @@
     <title>Document</title>
 </head>
 <body>
-        <div class="wrapper">
-                <div class="header">
-                    <h3>DUSK</h3>
-                    <a class="button" href="">About This Site</a>
-                    <a class="button" href="">THREE.js</a>
-                </div>
-                <div id="page2">
-                    <a class="down" href="page3.html">down</a>
-                 </div>
+
+    <div class="info">
+            <div class="header">
+                <a class="button" href="">About This Site</a>
+                <a class="button" href="index.html">Restart</a>
+                <a class="button" href="">THREE.js</a>
+            </div>
+            <h2>Click and drag to look around<br>
+                Zoom in and out
+            </h2>
+            <div class="bottom">
+                <a class="down" id="down2" href="page3.html">╲╱</a>
+            </div>
+        </div>
+    
+        <div id="page2">   
         </div>
 
     <script>
+        $('body').mousedown(function(){
+            $('h2').fadeTo(1000, 0);
+        });
+
         //page 2
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 0.1, 10000 );

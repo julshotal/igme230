@@ -20,28 +20,31 @@
 			canvas { width: 100%; height: 100% }
 	</style>
 </head>
-<body>
+<body id="body1">
 
-    <div class="wrapper">
+    <div class="info">
         <div class="header">
             <a class="button" href="">About This Site</a>
             <a class="button" href="">THREE.js</a>
         </div>
-        <div class="page1">
-            <h1>DUSK</h1>
-            <a class="down" href="page2.html">down</a>
+        <h1>DUSK</h1>
+        <div class="bottom">
+            <a class="down" id="down1" href="page2.html">╲╱</a>
         </div>
-    </div> 
+    </div>
+
+    <div id="page1">   
+    </div>
 
     <script>
-
+       
         //page 1
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 0.1, 10000 );
         renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize( window.innerWidth, window.innerHeight );
 
-        let container1 = document.querySelector('.wrapper');
+        let container1 = document.querySelector('#page1');
         container1.appendChild(renderer.domElement);
 
         camera.lookAt(1000, 500, 0);
@@ -61,7 +64,6 @@
             sound.setVolume( 0.5 );
             sound.play();
         });
-
 
         /*---------------------------------------------------skyspere-----------------------------------------------------*/
         /*https://gist.github.com/rlama/04d6413f7ce7f621d20b*/
