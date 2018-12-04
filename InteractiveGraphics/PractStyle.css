@@ -7,9 +7,10 @@
     display: flex;
     flex-direction: column;
 
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
+
 
 .header {
     order: 1;
@@ -22,7 +23,8 @@
     border-radius: 20px;
     padding: 15px 15px 15px 15px;
     text-decoration: none;
-    margin: 0px 50px 10px 50px;
+    margin: 0px 50px 0px 50px;
+    align-items: center;
 }
 
 #body1 {
@@ -66,7 +68,7 @@ h2 {
     order: 3;
 }
 
-.bottom .down {
+.bottom .down, .up {
     font-size: 10px;
     font-weight: bold;
     color: white;
@@ -79,11 +81,16 @@ h2 {
     margin: 25px 25px 10px 25px;
 }
 
-#down1:hover {
+#down1:hover, #up3:hover {
     background: linear-gradient(to bottom, #eabbaa, #d0c6f4);
 }
 
-#down2:hover {
+#up2:hover {
+    background: linear-gradient(to bottom, #FDF0EA, #AEE0FB);
+}
+
+
+#down2:hover, #up1:hover {
     background: linear-gradient(to bottom, #f03b49, #4a3a91);
 }
 
