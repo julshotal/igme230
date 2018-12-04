@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="PractStyle.css" href="styles.css">
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|EB+Garamond" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/build/three.js"></script>
     <script src="js/Water.js"></script>
@@ -22,11 +24,11 @@
 
     <div class="wrapper">
         <div class="header">
-            <h3>DUSK</h3>
             <a class="button" href="">About This Site</a>
             <a class="button" href="">THREE.js</a>
         </div>
-        <div id="page1">
+        <div class="page1">
+            <h1>DUSK</h1>
             <a class="down" href="page2.html">down</a>
         </div>
     </div> 
@@ -39,7 +41,7 @@
         renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize( window.innerWidth, window.innerHeight );
 
-        let container1 = document.querySelector('#page1');
+        let container1 = document.querySelector('.wrapper');
         container1.appendChild(renderer.domElement);
 
         camera.lookAt(1000, 500, 0);
