@@ -24,11 +24,11 @@
 
     <div class="info">
         <div class="header">
-            <a class="dropdown" href="">About This Site</a>
+            <a class="dropdown" href="#">About This Site</a>
                 <ul id="sub">
-                    <li><a href="">Light Sunset</a></li>
-                    <li><a href="">Twilight Sunset</a></li>
-                    <li><a href="">Documentation Page</a></li>
+                    <li><a href="page2.html">Light Sunset</a></li>
+                    <li><a href="page3.html">Twilight Sunset</a></li>
+                    <li><a href="doc.html">Documentation Page</a></li>
                 </ul>
             <a class="up" id="up1" href="page3.html">╱╲</a>
             <a class="button" href="https://threejs.org/">THREE.js</a>
@@ -44,13 +44,25 @@
 
     <script>
 
-        $(".dropdown").hover(function() {
+        $(".dropdown").click(function() {
             $("#sub").slideDown("slow");
         });
 
         $("#sub").mouseleave(function() {
             $(this).slideUp("slow");
         })
+
+        //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
+        window.addEventListener( 'resize', onWindowResize, false );
+
+        function onWindowResize(){
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
 
         //page 1
         var scene = new THREE.Scene();

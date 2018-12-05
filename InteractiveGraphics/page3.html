@@ -40,6 +40,18 @@
                 $('h2').fadeTo(500, 0);
             });
 
+            //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
+            window.addEventListener( 'resize', onWindowResize, false );
+
+            function onWindowResize(){
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize( window.innerWidth, window.innerHeight );
+
+            }
+
             //page 3
             var scene = new THREE.Scene();
             var camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 0.1, 10000 );
