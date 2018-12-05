@@ -36,28 +36,8 @@
 
         <script>
 
-            $(".up").mouseover(function() {
-                $('#up3').css({
-                    background: "linear-gradient(to bottom, #eabbaa, #d0c6f4)"
-                });
-            });
-
-            $(".down").mouseover(function() {
-                $('#down3').css({
-                    background: "linear-gradient(to bottom, #f03b49, #4a3a91)"
-                });
-            });
-
-            $(".down").mouseleave(function() {
-                $('#down3').css({
-                    background: "transparent"
-                });
-            });
-
-            $(".up").mouseleave(function() {
-                $('#up3').css({
-                    background: "transparent"
-                });
+            $("body").mousedown(function() {
+                $('h2').fadeTo(500, 0);
             });
 
             //page 3

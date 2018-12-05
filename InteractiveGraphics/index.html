@@ -24,7 +24,12 @@
 
     <div class="info">
         <div class="header">
-            <a class="button" href="doc.html">About This Site</a>
+            <a class="dropdown" href="">About This Site</a>
+                <ul id="sub">
+                    <li><a href="">Light Sunset</a></li>
+                    <li><a href="">Twilight Sunset</a></li>
+                    <li><a href="">Documentation Page</a></li>
+                </ul>
             <a class="up" id="up1" href="page3.html">╱╲</a>
             <a class="button" href="https://threejs.org/">THREE.js</a>
         </div>
@@ -39,35 +44,23 @@
 
     <script>
 
-        $(".up").mouseover(function() {
-            $('#up1').css({
-                background: "linear-gradient(to bottom, #f03b49, #4a3a91)"
-            });
+        $(".dropdown").hover(function() {
+            $("#sub").slideDown("slow");
         });
 
-        $(".down").mouseover(function() {
-            $('#down1').css({
-                background: "linear-gradient(to bottom, #eabbaa, #d0c6f4)"
-            });
-        });
+        $("#sub").mouseleave(function() {
+            $(this).slideUp("slow");
+        })
 
-        $(".down").mouseleave(function() {
-            $('#down1').css({
-                background: "transparent"
-            });
-        });
-
-        $(".up").mouseleave(function() {
-            $('#up1').css({
-                background: "transparent"
-            });
-        });
-       
         //page 1
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 0.1, 10000 );
         renderer = new THREE.WebGLRenderer({antialias: true});
-        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        var windowH = window.innerHeight;
+        var windowW = window.innerWidth;
+
+        renderer.setSize( windowW, windowH );
 
         let container1 = document.querySelector('#page1');
         container1.appendChild(renderer.domElement);

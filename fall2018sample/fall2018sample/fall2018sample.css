@@ -61,7 +61,7 @@ html, body {
     display: grid;
     justify-content: center;
 
-    grid-template-columns: 33.3% 66.6% 200px;
+    grid-template-columns: 1fr 2fr 200px;
     grid-template-rows: 4rem 100% 3rem;
 }
 
