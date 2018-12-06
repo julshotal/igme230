@@ -34,3 +34,146 @@ aside {
 /**************
 Your Formatting
 ***************/
+
+#yourgrid {
+    display: grid;
+    margin: 0 auto;
+
+    width: 90vw;
+    max-width: 1000px;
+
+    min-height: 100vh;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 75px 30px 1fr 2fr 50px;
+
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "as ar"
+    "ex ar"
+    "f f";
+}
+
+header {
+    display: flex;
+    /*grid-column: 1 / -1;
+    grid-row: 1 / 1;*/
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightpink;
+
+    grid-area: h;
+}
+
+nav {
+    display: flex;
+
+    /*grid-column: 1 / -1;
+    grid-row: 2 / 2;*/
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: lavenderblush;
+
+    grid-area: n;
+}
+
+aside {
+    /*grid-column: 1 / 1;
+    grid-row: 3 / 3;*/
+
+    background-color: lightblue;
+
+    grid-area: as;
+}
+
+article {
+    /*grid-column: 2 / -1;
+    grid-row: 3 / 3;*/
+
+    background-color: lightcyan;
+
+    grid-area: ar;
+}
+
+#extracredit {
+    /*grid-column: 2 / -1;
+    grid-row: 4 / 4;*/
+
+    grid-area: ex;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+
+    /*grid-column: 1 / -1;
+    grid-row: 5 / 5;*/
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightpink;
+
+    grid-area: f;
+}
+
+.mainmenu {
+    display: inline-flex;
+    justify-content: space-around;
+
+    width: 6rem;
+
+    background-color: #ccc;
+}
+
+.submenu {
+    position: absolute;
+
+    display: none;
+    list-style-type: none;
+    margin: none;
+    padding: none;
+
+    background-color: #ddd;
+}
+
+.submenu li {
+    padding-left: .25rem;
+    background-color: #ddd;
+}
+
+#count {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #yourgrid {
+        display: grid;
+        width: 100vw;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 30px auto auto auto 30px;
+
+        grid-template-areas: 
+        "h"
+        "n"
+        "ar"
+        "as"
+        "ex"
+        "f";
+    }
+
+
+
+}
