@@ -36,6 +36,16 @@ html {
     align-items: center;
 }
 
+.sound {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+
+    text-decoration: none;
+    padding: 15px 15px 15px 15px;
+}
+
 #body1 {
     animation-name: fade2;
     animation-duration: 2s;
@@ -92,8 +102,6 @@ h2 {
     z-index: 2;
 
     list-style-type: none;
-
-    display: flex;
     flex-direction: row;
 }
 
@@ -136,7 +144,7 @@ h2 {
     background: linear-gradient(to bottom, #f03b49, #4a3a91);
 }
 
-.button:hover, .dropdown:hover {
+.button:hover, .dropdown:hover, .sound:hover {
     background-color: white;
     color: black;
     transition: 800ms;

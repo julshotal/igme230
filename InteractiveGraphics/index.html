@@ -14,11 +14,7 @@
     <script src="js/Refractor.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-	</style>
+    <title>DUSK</title>
 </head>
 <body id="body1">
 
@@ -32,6 +28,7 @@
                 </ul>
             <a class="up" id="up1" href="page3.html">╱╲</a>
             <a class="button" href="https://threejs.org/">THREE.js</a>
+            <a class="sound" href="#">♫</a>
         </div>
         <h1>DUSK</h1>
         <div class="bottom">
@@ -44,13 +41,13 @@
 
     <script>
 
-        $(".dropdown").click(function() {
-            $("#sub").slideDown("slow");
+        $(".dropdown").mouseover(function() {
+            $("#sub").css("display", "flex");
         });
 
         $("#sub").mouseleave(function() {
-            $(this).slideUp("slow");
-        })
+            $(this).css("display", "none");
+        });
 
         //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
         window.addEventListener( 'resize', onWindowResize, false );
@@ -120,6 +117,32 @@
             texture = loader.load( "img/" + name + ".jpg" );
 
            var material = new THREE.MeshPhongMaterial({ 
+                map: texture,
+            });
+
+            var sky = new THREE.Mesh(skyGeo, material);
+            sky.material.side = THREE.BackSide;
+            sceneNum.add(sky);
+
+            var sun = new THREE.SphereBufferGeometry( 600, 30, 100 );
+
+            var light1 = new THREE.PointLight( sunColor , .1 );
+            light1.add( new THREE.Mesh( sun, new THREE.MeshBasicMaterial( { color: sunColor } ) ) );
+            light1.position.set(1000, sunHeight, 0);
+            sceneNum.add( light1);
+
+            var sunRay = new THREE.DirectionalLight(sunColor , .5);
+            sunRay.target.position.set(1000, sunHeight, 0);
+            sceneNum.add( sunRay, sunRay.target);
+
+        }
+
+        function createSky(name, sunColor, sceneNum, sunHeight) {
+            var skyGeo = new THREE.SphereGeometry(1000, 50, 50); 
+            var loader  = new THREE.TextureLoader(),
+            texture = loader.load( "img/" + name + ".jpg" );
+
+            var material = new THREE.MeshPhongMaterial({ 
                 map: texture,
             });
 
