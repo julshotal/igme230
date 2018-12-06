@@ -8,7 +8,9 @@ html {
     width: 100vw;
 }
 
+
 .info {
+
     height: 100vh;
     width: 100vw;
 
@@ -24,6 +26,39 @@ html {
 .header {
     order: 1;
 }
+
+#documentation {
+    order: 2;
+    display: flex;
+
+    flex-direction: row;
+}
+
+#writeup {
+    width: 60%;
+    margin-left: 40px;
+}
+
+#sources {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 30%;
+
+    align-items: center;
+}
+
+#sources .button {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    margin: 20px 5px 20px 5px;
+}
+
 
 .header .button, .dropdown {
     font-family: 'Open Sans', sans-serif;
@@ -79,7 +114,15 @@ h2 {
     text-shadow: 0px 0px 5px white;
 }
 
-.bottom{
+h3 {
+    text-align: left;
+    font-size: 20px;
+
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+}
+
+.bottom {
     order: 3;
 }
 
@@ -139,12 +182,11 @@ h2 {
     background: linear-gradient(to bottom, #FDF0EA, #AEE0FB);
 }
 
-
 #down2:hover, #up1:hover, #up3:hover {
     background: linear-gradient(to bottom, #f03b49, #4a3a91);
 }
 
-.button:hover, .dropdown:hover, .sound:hover {
+.button:hover, .dropdown:hover, .sound:hover, #sources .button:hover {
     background-color: white;
     color: black;
     transition: 800ms;

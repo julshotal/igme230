@@ -25,10 +25,35 @@
             <a class="sound" href="#">♫</a>
         </div>
 
-        <div class="bottom">
-            <a class="down" id="down2" href="page3.html">╲╱</a>
+        <div id="documentation">
+        <div id="writeup">
+            <h3>Purpose</h3>
+            <p>The purpose of this site is to just create a relaxing interactive sunset simulator by combining interactive graphics with audio</p>
+            <h3>Wireframes</h3>
+            <p></p>
+            <h3>Design</h3>
+            <p></p>
+            <h3>Above and Beyond</h3>
+            <p></p>
+        </div>
+
+        <div id="sources">
+                <a class="button" href="https://freesound.org/people/Setuniman/sounds/165765/">cinematic intro</a>
+                <a class="button" href="https://freesound.org/people/BurghRecords/sounds/415151/">running water</a>
+                <a class="button" href="https://freesound.org/people/melissapons/sounds/171587/">windy ambience</a>
+                <a class="button" href="https://freesound.org/people/DudeAwesome/sounds/387593/">deep breathing</a>
+                <a class="button" href="https://freesound.org/people/Kinoton/sounds/393819/">underwater ambience</a>
+                <a class="button" href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_shaders_ocean.html">water plane</a>
+                <a class="button" href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_shaders_ocean.html">orbit controls</a>
+                <a class="button" href="https://threejs.org/docs/#api/en/audio/Audio">audio</a>
+                <a class="button" href="https://threejs.org/docs/#api/en/audio/PositionalAudio">positional audio</a>
+                <a class="button" href="https://stackoverflow.com/questions/32233805/im-new-to-threejs-how-to-create-a-sky-dome">skydome</a>
+                <a class="button" href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_lights_pointlights2.html">point light mesh</a>
+                <a class="button" href="https://webgradients.com/?fbclid=IwAR2OPFZuiGUflok-dJ3QNQ2GGJ-KjbOHCIuUukL_OxkRNCVANsygKIpEP7k">sky gradients (modified)</a>
         </div>
     </div>
+    </div>
+    </body>
 
     <div id="doc"> 
 
@@ -85,10 +110,8 @@
         });
 
         /*---------------------------------------------------skyspere-----------------------------------------------------*/
-        /*https://gist.github.com/rlama/04d6413f7ce7f621d20b*/
 
         createSky("night", scene);
-
 
         /*---------------------------------------------------water-------------------------------------------------------*/
 
@@ -101,10 +124,10 @@
 						waterNormals: new THREE.TextureLoader().load( 'textures/waternormals.jpg', function ( texture ) {
 							texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 						} ),
-                        scale: 20,
-                        opacity: .5,
+                        scale: 15,
+                        opacity: .3,
                         color: 0xffffff,
-                        flowDirection: new THREE.Vector2( 0, 2 )
+                        flowDirection: new THREE.Vector2( 0, -1 )
 					}
                 );
                 
