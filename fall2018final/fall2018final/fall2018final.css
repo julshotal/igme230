@@ -126,7 +126,7 @@ footer {
 }
 
 .mainmenu {
-    display: inline-flex;
+    display: flex;
     justify-content: space-around;
 
     width: 6rem;
