@@ -39,12 +39,25 @@ html {
     margin-left: 40px;
 }
 
+p {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+
+    padding-left: 20px;
+}
+
 #sources {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     width: 30%;
+
+    padding-left: 30px;
+    margin-left: 10px;
+
+    border-left: 1px solid white;
 
     align-items: center;
 }
