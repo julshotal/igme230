@@ -22,6 +22,7 @@
                     <a class="button" href="doc.html">About This Site</a>
                     <a class="up" id="up3" href="page2.html">╱╲</a>
                     <a class="button" href="https://threejs.org/">THREE.js</a>
+                    <a class="sound" href="#">♫</a>
                 </div>
                 <h2>Click and drag to look around<br>
                     Zoom in and out
@@ -83,6 +84,16 @@
                 sound2.setRefDistance( 50 );
                 sound2.play();
             });      
+
+            $(".sound").click(function() {
+                if(sound.isPlaying == true){
+                    sound.stop();
+                    $(".sound").css('textDecoration','line-through');
+                } else {
+                    sound.play();
+                    $(".sound").css('textDecoration', "none");
+                }
+            });
 
             /*---------------------------------------------------skyspere-----------------------------------------------------*/
             /*https://gist.github.com/rlama/04d6413f7ce7f621d20b*/

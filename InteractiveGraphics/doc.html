@@ -20,8 +20,9 @@
     <div class="info">
         <div class="header">
             <a class="button" href="index.html">Restart</a>
-            <a class="up" id="up2" href="page3.html">╱╲</a>
+            <a class="up" id="up3" href="page3.html">╱╲</a>
             <a class="button" href="https://threejs.org/">THREE.js</a>
+            <a class="sound" href="#">♫</a>
         </div>
 
         <div class="bottom">
@@ -29,7 +30,118 @@
         </div>
     </div>
 
-    <div id="doc">   
+    <div id="doc"> 
+
     </div>
+
+    <script>
+           
+        //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
+        window.addEventListener( 'resize', onWindowResize, false );
+
+        function onWindowResize(){
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+        
+        //page 2
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 0.1, 10000 );
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        let container2 = document.querySelector('#doc');
+        container2.appendChild(renderer.domElement);
+
+        // create an AudioListener and add it to the camera
+        var listener = new THREE.AudioListener();
+        camera.add( listener );
+
+        // create a global audio source
+        var sound = new THREE.Audio( listener );
+
+        // load a sound and set it as the Audio object's buffer
+        var audioLoader = new THREE.AudioLoader();
+        audioLoader.load( 'music/underwater.wav', function( buffer ) {
+            sound.setBuffer( buffer );
+            sound.setLoop( true );
+            sound.setVolume( 0.5 );
+            sound.play();
+        });
+
+
+        $(".sound").click(function() {
+            if(sound.isPlaying == true){
+                sound.stop();
+                $(".sound").css('textDecoration','line-through');
+            } else {
+                sound.play();
+                $(".sound").css('textDecoration', "none");
+            }
+        });
+
+        /*---------------------------------------------------skyspere-----------------------------------------------------*/
+        /*https://gist.github.com/rlama/04d6413f7ce7f621d20b*/
+
+        createSky("night", scene);
+
+
+        /*---------------------------------------------------water-------------------------------------------------------*/
+
+        var waterGeo = new THREE.PlaneBufferGeometry( 500, 500 );
+				var water = new THREE.Water(
+					waterGeo,
+					{
+						textureWidth: 1000,
+						textureHeight: 1000,
+						waterNormals: new THREE.TextureLoader().load( 'textures/waternormals.jpg', function ( texture ) {
+							texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+						} ),
+                        scale: 20,
+                        opacity: .5,
+                        color: 0xffffff,
+                        flowDirection: new THREE.Vector2( 0, 2 )
+					}
+                );
+                
+                water.rotation.x = 0;
+                scene.add( water );
+                  
+        /*-----------------------------------------------------Look around-----------------------------------------------------*/
+
+            
+        /*-----------------------------------------------------functions and lights-----------------------------------------------------*/
+
+        var ambLight = new THREE.AmbientLight( 0x00ffff,  .9 ); 
+        scene.add(ambLight);
+     
+        camera.position.z = 5;
+        function animate() {
+            requestAnimationFrame( animate );
+	        renderer.render( scene, camera );
+        }   
+
+        animate();
+
+        function createSky(name, sceneNum) {
+            var skyGeo = new THREE.SphereGeometry(1000, 50, 50); 
+            var loader  = new THREE.TextureLoader(),
+            texture = loader.load( "img/" + name + ".jpg" );
+
+            var material = new THREE.MeshPhongMaterial({ 
+                map: texture,
+            });
+
+            var sky = new THREE.Mesh(skyGeo, material);
+            sky.material.side = THREE.BackSide;
+            sceneNum.add(sky);
+
+        }
+
+    </script>
 </body>
 </html>

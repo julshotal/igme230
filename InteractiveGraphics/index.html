@@ -49,6 +49,7 @@
             $(this).css("display", "none");
         });
 
+
         //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
         window.addEventListener( 'resize', onWindowResize, false );
 
@@ -90,6 +91,16 @@
             sound.setLoop( true );
             sound.setVolume( 0.5 );
             sound.play();
+        });
+
+        $(".sound").click(function() {
+            if(sound.isPlaying == true){
+                sound.stop();
+                $(".sound").css('textDecoration','line-through');
+            } else {
+                sound.play();
+                $(".sound").css('textDecoration', "none");
+            }
         });
 
         /*---------------------------------------------------skyspere-----------------------------------------------------*/
