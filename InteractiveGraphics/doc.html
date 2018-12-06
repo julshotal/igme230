@@ -20,7 +20,7 @@
     <div class="info">
         <div class="header">
             <a class="button" href="index.html">Restart</a>
-            <a class="up" id="up3" href="page3.html">╱╲</a>
+            <a class="up" id="up4" href="page3.html">╱╲</a>
             <a class="button" href="https://threejs.org/">THREE.js</a>
             <a class="sound" href="#">♫</a>
         </div>
@@ -30,11 +30,21 @@
             <h3>Purpose</h3>
             <p>The purpose of this site is was to create a relaxing interactive sunset simulator by combining interactive graphics with audio. Also, it will serve as a portfolio piece.</p>
             <h3>Wireframes</h3>
-            <p></p>
+            <div class="wf">
+                <a href="img/index.png" alt="Index Page Wireframe"><img src="img/thumb3.png"></a>
+                <a href="img/content.png" alt="Content Page Wireframe"><img src="img/thumb1.png"></a>
+                <a href="img/documentation.png" alt="Documentation Page Wireframe"><img src="img/thumb2.png"></a>
+            </div>
             <h3>Design</h3>
-            <p></p>
+            <p>I used gradients as scene backgrounds to mimic the gradient of a sunset, and used illustrations rather than images 
+                so they didn't clash with the style of the 3d objects. Also, I changed and played up the sun color at each stage
+                as when the sun sets it often will appear slightly yellow or red instead of the usual bright white. Controls were kept 
+                transparent and minimum to not distract from the graphics.
+            </p>
             <h3>Above and Beyond</h3>
-            <p></p>
+            <p>I used prior self-taught knowledge of Adobe Photoshop elements to add clouds and effects to the background gradients. I also
+                learned the THREE.js documentation, and the basics of how to set up a scene with a webGL renderer and camera.
+            </p>
         </div>
 
         <div id="sources">
@@ -47,6 +57,8 @@
                 <a class="button" href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_shaders_ocean.html">orbit controls</a>
                 <a class="button" href="https://threejs.org/docs/#api/en/audio/Audio">audio</a>
                 <a class="button" href="https://threejs.org/docs/#api/en/audio/PositionalAudio">positional audio</a>
+                <a class="button" href="https://stackoverflow.com/questions/20290402/three-js-resizing-canvas">resizing canvas</a>
+                <a class="button" href="https://mockflow.com/">mockflow</a>
                 <a class="button" href="https://stackoverflow.com/questions/32233805/im-new-to-threejs-how-to-create-a-sky-dome">skydome</a>
                 <a class="button" href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_lights_pointlights2.html">point light mesh</a>
                 <a class="button" href="https://webgradients.com/?fbclid=IwAR2OPFZuiGUflok-dJ3QNQ2GGJ-KjbOHCIuUukL_OxkRNCVANsygKIpEP7k">sky gradients (modified)</a>
@@ -60,7 +72,7 @@
     </div>
 
     <script>
-           
+
         //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
         window.addEventListener( 'resize', onWindowResize, false );
 

@@ -181,6 +181,15 @@ h3 {
     margin: 20px 40px 0px 0px;
 }
 
+img {
+    margin: 0px 5px 0px 5px;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: 800ms;
+}
+
 #sub li:hover{
     border-color: transparent;
     background-color: #4a3a91;
@@ -195,7 +204,7 @@ h3 {
     background: linear-gradient(to bottom, #FDF0EA, #AEE0FB);
 }
 
-#down2:hover, #up1:hover, #up3:hover {
+#down2:hover, #up1:hover, #up4:hover {
     background: linear-gradient(to bottom, #f03b49, #4a3a91);
 }
 
