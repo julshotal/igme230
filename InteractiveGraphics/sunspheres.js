@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     if (window.location.pathname == '/index.html') {
-        $(".dropdown").mouseover(function() {
-            $("#sub").css("display", "flex");
-        });
 
-        $("#sub").mouseleave(function() {
-            $(this).css("display", "none");
-        });
+        if($(window).width() > 800){
+            $(".dropdown").mouseover(function() {
+                $("#sub").css("display", "flex");
+            });
+
+            $("#sub").mouseleave(function() {
+                $(this).css("display", "none");
+            });
+        }
 
 
         //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
