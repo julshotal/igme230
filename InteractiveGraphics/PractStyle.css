@@ -104,12 +104,20 @@ p {
 
 /*apply the fade2 animation to the body of the index page*/
 #body1 {
-    background-color: skyblue;
+    background-image: url(img/daysky.png);
 
     animation-name: fade2;
     animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+}
+
+#body2 {
+    background-image: url(img/dusklight.png);
+}
+
+#body3 {
+    background-image: url(img/duskdark.png);
 }
 
 /*h1 formatting with the fade animation applied*/
@@ -330,6 +338,10 @@ img:hover {
     /*push elements off the side of the page slightly*/
     #writeup, #sources {
         margin-left: 10px;
+    }
+
+    #click {
+        display: none;
     }
 
 
