@@ -139,9 +139,9 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-/*css for chrome*/
+/*css for fireflies click command*/
 #click {
-    top: 50px;
+    top: 450px;
     position: absolute;
     
     font-size: 20px;
@@ -312,7 +312,7 @@ img:hover {
 
     /*change up and down button size*/
     .up, .bottom .down {
-        font-size: 5px;
+        font-size: 10px;
         font-weight: bold;
     }
 
