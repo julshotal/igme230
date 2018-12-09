@@ -2,7 +2,7 @@
 //make sure DOM content is loaded before running any javaScript
 document.addEventListener("DOMContentLoaded", function() {
     //only run this code for the index page
-    if (window.location.pathname == '/index.html') {
+    if (window.location.pathname == '/igme230/InteractiveGraphics/index.html') {
 
         //if the window is mobile sized, disable the jquery for dropdown menu
         if($(window).width() > 800){
