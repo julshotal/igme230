@@ -141,7 +141,7 @@ h1 {
 
 /*css for fireflies click command*/
 #click {
-    top: 450px;
+    bottom: 100px;
     position: absolute;
     
     font-size: 20px;
