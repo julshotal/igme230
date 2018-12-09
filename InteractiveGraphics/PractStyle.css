@@ -120,6 +120,10 @@ p {
     background-image: url(img/duskdark.png);
 }
 
+#body4 {
+    background-image: url(img/night.jpg);
+}
+
 /*h1 formatting with the fade animation applied*/
 h1 {
     text-align: center;
@@ -138,7 +142,7 @@ h1 {
 /*css for chrome*/
 #click {
     margin-top: 50px;
-    position: absolute;
+    position: static;
     
     font-size: 20px;
     color: black;
@@ -149,21 +153,6 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-/*firefox wants to be troublesome when I use absolute positioning 
-this is firefox specific css*/
-@-moz-document url-prefix() {
-    #click {
-        position: static;
-
-        font-size: 20px;
-        color: black;
-
-        animation-name: fade;
-        animation-duration: 5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-    }
-}
 
 /*h2 formatting*/
 /*h2 sits in the middle of the header and down button*/
