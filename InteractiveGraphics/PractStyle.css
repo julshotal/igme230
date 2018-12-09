@@ -129,6 +129,8 @@ h1 {
     margin-top: 80px;
     position: fixed;
 
+    display: block;
+
     font-size: 20px;
     color: black;
 
