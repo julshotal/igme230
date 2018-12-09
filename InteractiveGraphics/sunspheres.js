@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
+        //declare variable
         let fireflies;
 
         //resize the scene as the browser window is resized
