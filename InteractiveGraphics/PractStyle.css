@@ -128,8 +128,8 @@ h1 {
 }
 
 #click {
-    margin-top: 80px;
-    position: fixed;
+    margin-top: 150px;
+    position: absolute;
 
     display: block;
 
