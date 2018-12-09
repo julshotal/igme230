@@ -276,8 +276,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     //call function to create page3 skydome
     createSky("duskdark2", 0xCB253E, scene3, 50, 300);
-
-    scene.fog = new THREE.Fog(0xCB253E, 0.0025, 20);
     
     
     /*---------------------------------------------------water-------------------------------------------------------*/
