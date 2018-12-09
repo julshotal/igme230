@@ -141,8 +141,8 @@ h1 {
 
 /*css for chrome*/
 #click {
-    margin-top: 50px;
-    position: static;
+    top: 50px;
+    position: absolute;
     
     font-size: 20px;
     color: black;
@@ -152,7 +152,6 @@ h1 {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
-
 
 /*h2 formatting*/
 /*h2 sits in the middle of the header and down button*/
