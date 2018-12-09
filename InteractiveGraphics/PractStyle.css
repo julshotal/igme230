@@ -103,7 +103,7 @@ p {
 /*apply the fade2 animation to the body of the index page*/
 #body1 {
     background-color: skyblue;
-    
+
     animation-name: fade2;
     animation-duration: 2s;
     animation-timing-function: ease-in;
@@ -117,6 +117,19 @@ h1 {
     font-size: 100px;
     font-family: 'Comfortaa', sans-serif;
     font-weight: bold;
+    color: black;
+
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#click {
+    margin-top: 80px;
+    position: absolute;
+
+    font-size: 20px;
     color: black;
 
     animation-name: fade;

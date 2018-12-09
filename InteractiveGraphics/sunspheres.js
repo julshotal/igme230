@@ -2,7 +2,7 @@
 //make sure DOM content is loaded before running any javaScript
 document.addEventListener("DOMContentLoaded", function() {
     //only run this code for the index page
-    if (window.location.pathname == '/igme230/InteractiveGraphics/index.html') {
+    if (window.location.pathname == '/index.html') {
 
         //if the window is mobile sized, disable the jquery for dropdown menu
         if($(window).width() > 800){
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
+        let fireflies;
 
         //resize the scene as the browser window is resized
         //taken from https://stackoverflow.com/questions/20290402/three-js-resizing-canvas
@@ -69,7 +70,35 @@ document.addEventListener("DOMContentLoaded", function() {
         //function to create the skydome, sun, pointlight, directional light, and push them to the scene
         //takes in texture image, sun color, scene number, sun height, and sun size as parameters
         createSky("daysky", 0xffffff, scene, 500, 600);
+
+
+        //create a new geometry and array for the fireflies
+        fireflies = new THREE.Geometry();
+        let flyMaterial = [];
+        
+        //create 5000 fireflies, spread them about the page, then push them to the fireflies array
+        //create new PointsMaterial and each point
+        for ( var i = 0; i < 5000; i ++ ) {
             
+            var fly = new THREE.Vector3();
+            fly.x = THREE.Math.randFloatSpread( 2000 );
+            fly.y = THREE.Math.randFloatSpread( 2000 );
+            fly.z = THREE.Math.randFloatSpread( 2000 );
+        
+            fireflies.vertices.push( fly );
+            
+            flyMaterial[i] = new THREE.PointsMaterial( { color: 0xffffff } );
+            
+            var allFlies = new THREE.Points( fireflies, flyMaterial[i] );
+        }
+
+        //add fireflies to scene on click
+        $(window).click(function() {
+            scene.add( allFlies );
+        });
+
+        
+    
         /*-----------------------------------------------------functions and lights-----------------------------------------------------*/
 
         //create new ambient light and add it to the scene
@@ -77,13 +106,19 @@ document.addEventListener("DOMContentLoaded", function() {
         scene.add(ambLight);
     
         //set camera's z position
-        camera.position.z = 5;
+        camera.position.z = 5; 
 
         //animate the scene and camera
         function animate() {
             requestAnimationFrame( animate );
             renderer.render( scene, camera );
+
+            //move the fireflies positions into the sun in the center
+            allFlies.position.x += Math.random();
+            allFlies.position.y += Math.random();
+            allFlies.position.z += Math.random();
         }   
+
 
         //call animation frame
         animate();
