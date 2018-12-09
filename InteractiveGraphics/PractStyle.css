@@ -127,7 +127,7 @@ h1 {
 
 #click {
     margin-top: 80px;
-    position: absolute;
+    position: fixed;
 
     font-size: 20px;
     color: black;
