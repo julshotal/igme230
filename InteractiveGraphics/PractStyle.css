@@ -150,7 +150,7 @@ h1 {
 }
 
 /*firefox wants to be troublesome when I use absolute positioning 
-this is firefox specific css*/
+this is firefox specific css
 @-moz-document url-prefix() {
     #click {
         position: relative;
@@ -163,7 +163,7 @@ this is firefox specific css*/
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
-}
+}*/
 
 /*h2 formatting*/
 /*h2 sits in the middle of the header and down button*/
@@ -325,6 +325,7 @@ img:hover {
     /*change up and down button size*/
     .up, .bottom .down {
         font-size: 5px;
+        font-weight: bold;
     }
 
     /*change display of sound so it will wrap if the screen gets too small*/
