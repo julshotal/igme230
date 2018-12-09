@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname == '/index.html') {
+    if (window.location.pathname == '/igme230/InteractiveGraphics/index.html') {
 
         if($(window).width() > 800){
             $(".dropdown").mouseover(function() {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
 
-    } else if (window.location.pathname == '/page2.html') {
+    } else if (window.location.pathname == '/igme230/InteractiveGraphics/page2.html') {
 
         /*-----------------------------------------------------Page 2-----------------------------------------------------*/
         /*-----------------------------------------------------Page 2-----------------------------------------------------*/
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         animate();
 
-    } else if (window.location.pathname == '/page3.html') {
+    } else if (window.location.pathname == '/igme230/InteractiveGraphics/page3.html') {
 
     /*-----------------------------------------------------Page 3-----------------------------------------------------*/
     /*-----------------------------------------------------Page 3-----------------------------------------------------*/
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     animate();
 
-} else if (window.location.pathname == '/doc.html') {
+} else if (window.location.pathname == '/igme230/InteractiveGraphics/doc.html') {
     /*-----------------------------------------------------documentation-----------------------------------------------------*/
     /*-----------------------------------------------------documentation-----------------------------------------------------*/
     /*-----------------------------------------------------documentation-----------------------------------------------------*/

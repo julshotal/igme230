@@ -284,6 +284,10 @@ img:hover {
         align-content: center;
     }
 
+    #writeup, #sources {
+        margin-left: 10px;
+    }
+
 
 }
 
