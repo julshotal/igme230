@@ -102,6 +102,8 @@ p {
 
 /*apply the fade2 animation to the body of the index page*/
 #body1 {
+    background-color: skyblue;
+    
     animation-name: fade2;
     animation-duration: 2s;
     animation-timing-function: ease-in;

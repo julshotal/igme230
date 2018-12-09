@@ -1,3 +1,4 @@
+
 //make sure DOM content is loaded before running any javaScript
 document.addEventListener("DOMContentLoaded", function() {
     //only run this code for the index page
@@ -68,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
         //function to create the skydome, sun, pointlight, directional light, and push them to the scene
         //takes in texture image, sun color, scene number, sun height, and sun size as parameters
         createSky("daysky", 0xffffff, scene, 500, 600);
-
             
         /*-----------------------------------------------------functions and lights-----------------------------------------------------*/
 
@@ -276,6 +276,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     //call function to create page3 skydome
     createSky("duskdark2", 0xCB253E, scene3, 50, 300);
+
+    scene.fog = new THREE.Fog(0xCB253E, 0.0025, 20);
     
     
     /*---------------------------------------------------water-------------------------------------------------------*/
@@ -495,5 +497,6 @@ document.addEventListener("DOMContentLoaded", function() {
         renderer.setSize( window.innerWidth, window.innerHeight );
 
     }
+    
 
 });
