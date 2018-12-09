@@ -1,14 +1,16 @@
 
+/*custom cursor for entire site*/
 html {
     cursor: url(img/cursor.png), auto;
 }
 
-#page2 {
+/*set the divs for the scenes to full height and width*/
+#page2, #page3, #doc, #page1 {
     height: 100vh;
     width: 100vw;
 }
 
-
+/*align all non-scene elements centered in a column taking up all available height*/
 .info {
 
     height: 100vh;
@@ -22,11 +24,12 @@ html {
     justify-content: space-around;
 }
 
-
+/*header is put first*/
 .header {
     order: 1;
 }
 
+/*place the documentation information second and make another flex container, this time a row*/
 #documentation {
     order: 2;
     display: flex;
@@ -34,11 +37,13 @@ html {
     flex-direction: row;
 }
 
+/*writeup grows three times wider within the container*/
 #writeup {
     flex-grow: 3;
     margin-left: 40px;
 }
 
+/*paragraph formatting for documentation page*/
 p {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
@@ -47,12 +52,11 @@ p {
     padding-left: 20px;
 }
 
+/*sources are set into a row and wraps, border added for visual divide between information*/
 #sources {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    flex-grow: 1;
 
     padding-left: 30px;
     margin-left: 30px;
@@ -62,6 +66,7 @@ p {
     align-items: center;
 }
 
+/*formatting for the sources buttons*/
 #sources .button {
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -72,7 +77,7 @@ p {
     margin: 5px 5px 5px 5px;
 }
 
-
+/*formatting for the header buttons (drop down is in the header)*/
 .header .button, .dropdown {
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -84,6 +89,7 @@ p {
     align-items: center;
 }
 
+/*formatting for the audio control button in the header*/
 .sound {
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -94,6 +100,7 @@ p {
     padding: 15px 15px 15px 15px;
 }
 
+/*apply the fade2 animation to the body of the index page*/
 #body1 {
     animation-name: fade2;
     animation-duration: 2s;
@@ -101,7 +108,7 @@ p {
     animation-fill-mode: forwards;
 }
 
-
+/*h1 formatting with the fade animation applied*/
 h1 {
     text-align: center;
     order: 2;
@@ -116,6 +123,8 @@ h1 {
     animation-fill-mode: forwards;
 }
 
+/*h2 formatting*/
+/*h2 sits in the middle of the header and down button*/
 h2 {
     display: block;
     text-align: center;
@@ -127,6 +136,7 @@ h2 {
     text-shadow: 0px 0px 5px white;
 }
 
+/*h3 formatting*/
 h3 {
     text-align: left;
     font-size: 20px;
@@ -135,10 +145,12 @@ h3 {
     color: white;
 }
 
+/*div containing the down button goes at the bottom of the flex container*/
 .bottom {
     order: 3;
 }
 
+/*down and up button formatting*/
 .bottom .down, .up {
     font-size: 10px;
     font-weight: bold;
@@ -152,6 +164,8 @@ h3 {
     margin: 25px 25px 10px 25px;
 }
 
+/*fix the positon of the submenu and place it above the other elements*/
+/*no list style, place the objects into a row when the display changes to flex on mouseover*/
 #sub {
     position: fixed;
     display: none;
@@ -161,6 +175,7 @@ h3 {
     flex-direction: row;
 }
 
+/*submenu link formatting*/
 #sub a {
     font-size: 15px;
     font-weight: bold;
@@ -171,6 +186,7 @@ h3 {
     padding: 20px 20px 20px 20px;
 }
 
+/*submenu list items formatting*/
 #sub li {
     align-content: center;
     justify-content: center;
@@ -181,21 +197,25 @@ h3 {
     margin: 20px 40px 0px 0px;
 }
 
+/*formatting for wireframe images*/
 img {
     margin: 0px 20px 0px 20px;
 }
 
+/*images grow on hover*/
 img:hover {
     transform: scale(1.1);
     transition: 800ms;
 }
 
+/*submenu list items change to white with black text on hover, transition added for smoothness*/
 #sub li:hover{
     border-color: transparent;
     background-color: #4a3a91;
     transition: 800ms;
 }
 
+/*up and down buttons change color to the gradient of the page above or below it on hover*/
 #down1:hover, #up3:hover {
     background: linear-gradient(to bottom, #eabbaa, #d0c6f4);
 }
@@ -212,12 +232,14 @@ img:hover {
     background-color: #1b102e;
 }
 
+/*header buttons and source buttons turn to white with black text on hover, smooth transition*/
 .button:hover, .dropdown:hover, .sound:hover, #sources .button:hover {
     background-color: white;
     color: black;
     transition: 800ms;
 }
 
+/*blurs and skews the text to create a "smoke" type fade in effect*/
 @keyframes fade {
     0% { -webkit-filter: blur(40px); /* Safari */ filter: blur(40px); transform: skew(10deg, 10deg); }
     10% { -webkit-filter: blur(30px); /* Safari */ filter: blur(30px); transform: skew(-15deg, 5deg);}
@@ -227,6 +249,7 @@ img:hover {
     100% { -webkit-filter: blur(0px); /* Safari */ filter: blur(0px); }
 }
 
+/*animation page to fade in main page from blurry to sharp*/
 @keyframes fade2 {
     0% {-webkit-filter: blur(20px); /* Safari */ filter: blur(20px);}
     25%  {-webkit-filter: blur(10px); /* Safari */ filter: blur(10px);}
@@ -235,17 +258,21 @@ img:hover {
     100%  {-webkit-filter: blur(0px); /* Safari */ filter: blur(0px);}
 }
 
+/*media query for mobile devices*/
 @media screen and (max-width: 800px) {
 
+    /*make h2 smaller and add break-word wrap just in case*/
     h2 {
         font-size: 30px;
         word-wrap: break-word;
     }
 
+    /*limite header width to a little less than 100%*/
     .header {
         width: 90vw;
     }
 
+    /*change header, dropdown, and sound button's formatting to better fit mobile*/
     .header .button, .dropdown, .sound{
         font-size: 15px;
         padding: 5px 5px 5px 5px;
@@ -253,30 +280,30 @@ img:hover {
         margin: 20px 0px 0px 0px;
     }
 
+    /*change up and down button size*/
     .up, .bottom .down {
         font-size: 5px;
     }
 
+    /*change display of sound so it will wrap if the screen gets too small*/
     .sound {
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
 
+    /*change background image of body4 for mobile as the page needs to scroll 
+    and the scene only fills visible browser window*/
     #body4 {
         background-image: url("img/night.jpg");
     }
 
+    /*hide the documentation page's three.js scene*/
     #doc {
         display: none;
     }
 
-    #wrapper {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
+    /*documentation elements go from side by side in row to a single column*/
     #documentation {
         flex-direction: column;
         width: 90vw;
@@ -284,6 +311,7 @@ img:hover {
         align-content: center;
     }
 
+    /*push elements off the side of the page slightly*/
     #writeup, #sources {
         margin-left: 10px;
     }
