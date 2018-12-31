@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Julia Hotaling's Portfolio: Launchpad</title>
+    <title>Julia Hotaling's Portfolio: 20 Questions</title>
 </head>
 
 <body class="content">
@@ -18,40 +18,44 @@
             <button class="drop">My Work</button>
             <div id="dropdown" class="dropdown-content">
                 <a href="../JS/JavaScript.html">JavaScript</a>
-                <a href="../CSharp/CSharp.html">C#</a>
-                <a href="WebMobile.html">Web and Mobile</a>
+                <a href="CSharp.html">C#</a>
+                <a href="../WnM/WebMobile.html">Web and Mobile</a>
                 <a href="../GD/GraphicDesign.html">Graphic Design</a>
             </div>
         <a class = "button" href="../ContactMe.html">Contact Me</a>
         <a class = "button" href="../Resume.html">Resume</a>
-        <a class = "button" href="../AboutSite.html">About This Site</a>
+        <a class = "button" href="../AboutSite.html">About This Site </a>
         </div>
     
         
-        <h1 class="contenthead">Launchpad Site</h1>
-        <p class="intro">click on the image below to view the live page</p>
+        <h1 class="contenthead">20 Questions</h1>
+        <p class="intro"></p>
         
         <div class="stuff">
         <div class="image">
-            <a href="https://julshotal.github.io/igme230/"><img src="../images/launchpad.png" alt="Launchpad"></a>
+            <img src="../images/20questions.png" alt="20 Questions">
         </div>
 
         <div class="information">
             <h3>Overview</h3>
-            <p>This site serves as a launchpad for all my in-class exercises and projects for Web Design and Implementation (IGME 230).
-                It needed to have an image of me, as well as links for all the exercises and projects so they're easily accessible.
+            <p>Using a binary tree, this program reads a text file containing base information and, depending on the user answering simple yes
+                or no questions, will guess who the user is thinking of. If the program guesses correctly, it asks the user if they would like to
+                play again. If the program guesses incorrectly, it will ask the user who they were thinking of and what seperates the two and asks
+                if the user would like to play again. Once the user chooses to cease playing, the new information is written to the programs text file 
+                for the next time the game is plated, thus the program "learns" the new information.
             </p>
 
             <h3>Tools and Technologies</h3>
-            <p>This project uses HTML5 and CSS, and was uploaded to GitHub Pages</p>
+            <p>This project was created with C# in Visual Studio 2017</p>
 
             <h3>Challenges</h3>
-            <p>Orginally, the "pop" animation on the circular links wasn't isolated and happend to all of them at once. This was fixed
-                using the ":nth-child()" selector to add more of a delay to each child, causing them to pop into place one at a time. 
-                Also, the circles were all different sizes based on the title size of the exercise, and the rows became staggered when
-                these titles wrapped or got too long. To fix this, each link was put into an unordered list and flexbox was used to
-                keep them aligned.
+            <p>It was difficult using the FileIO StreamWriter to write all the new information to the program's text file, as each item
+                in the text file has a "L" or "B" in front of it which denotes whether that item is a branch or leaf node. This was fixed
+                by using a recursive function to check whether the item has children, and if it doesn't it's assigned "L" and if it does
+                it's assigned "B".
             </p>
+
+            <a class = "button" href="https://github.com/BakerIGM/20-questions-julshotal/tree/master/20%20Questions/20%20Questions">View Code</a>
         </div>
     </div>
 

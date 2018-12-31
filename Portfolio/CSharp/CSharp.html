@@ -35,16 +35,18 @@
         <div class="slideshow">
             <!--https://www.w3schools.com/w3css/w3css_slideshow.asp-->
             <a href="c1.html"><img class="slide" src="../images/file.png" alt="File IO"></a>
-            <!--<a href="JS2.html"><img class="slide" src="../images/Project2.gif" alt="Click and Point Game"></a>
-            <a href="JS3.html"><img class="slide" src="../images/90sKid.gif" alt="Arcade Game"></a>-->
+            <a href="c2.html"><img class="slide" src="../images/20q.png" alt="20 Questions Learning Program"></a>
+            <a href="c3.html"><img class="slide" src="../images/tto.png" alt="Windows Forms Delivery System"></a>
 
             <p class="descrip">Script editor application using a File IO to read and write over a text file</p>
-            <!--<p class="descrip">short project description2</p>
-            <p class="descrip">short project description3</p>-->
+            <p class="descrip">A binary tree application that plays 20 Questions with the user,<br> and learns new information when it loses</p>
+            <p class="descrip">Mock windows forms food delivery application<br>for the Rochester Institute of Technology</p>
         </div>
 
         <div class="quicklinks">
             <a class = "button" href="c1.html">File IO</a>
+            <a class = "button" href="c2.html">20 Questions</a>
+            <a class = "button" href="c3.html">Food Delivery System</a>
         </div>
 
         <div class="container">
@@ -57,34 +59,34 @@
 
         <script>
             //code to rotate through slideshow images and descriptions
-            // let slideNum= 0;
-            // let paraNum = 0;
-            // rotateThrough();
+            let slideNum= 0;
+            let paraNum = 0;
+            rotateThrough();
 
-            // function rotateThrough() {
-            //     let slides = document.getElementsByClassName("slide");
-            //     let descrips = document.getElementsByClassName("descrip");
+            function rotateThrough() {
+                let slides = document.getElementsByClassName("slide");
+                let descrips = document.getElementsByClassName("descrip");
 
-            //     for (let i = 0; i < slides.length; i++) {
-            //       slides[i].style.display = "none"; 
-            //       descrips[i].style.display = "none";
-            //     }
+                for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                  descrips[i].style.display = "none";
+                }
 
-            //     slideNum++;
-            //     paraNum++;
+                slideNum++;
+                paraNum++;
 
-            //     if (slideNum > slides.length) {
-            //         slideNum = 1;
-            //     } 
+                if (slideNum > slides.length) {
+                    slideNum = 1;
+                } 
 
-            //     if(paraNum > descrips.length) {
-            //         paraNum = 1;
-            //     }
+                if(paraNum > descrips.length) {
+                    paraNum = 1;
+                }
 
-            //     slides[slideNum-1].style.display = "block"; 
-            //     descrips[paraNum-1].style.display = "block";
-            //     setTimeout(rotateThrough, 10000);
-            // }
+                slides[slideNum-1].style.display = "block"; 
+                descrips[paraNum-1].style.display = "block";
+                setTimeout(rotateThrough, 10000);
+            }
 
             $('.drop').click(function () {
                 $('#dropdown').slideToggle(1000);

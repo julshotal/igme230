@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Julia Hotaling's Portfolio: Launchpad</title>
+    <title>Julia Hotaling's Portfolio: Dusk</title>
 </head>
 
 <body class="content">
@@ -28,29 +28,29 @@
         </div>
     
         
-        <h1 class="contenthead">Launchpad Site</h1>
-        <p class="intro">click on the image below to view the live page</p>
+        <h1 class="contenthead">Dusk</h1>
+        <p class="intro">click on the image below to view the live page
+        </p>
         
         <div class="stuff">
         <div class="image">
-            <a href="https://julshotal.github.io/igme230/"><img src="../images/launchpad.png" alt="Launchpad"></a>
+            <a href="https://julshotal.github.io/igme230/InteractiveGraphics/index.html"><img src="../images/dusk.png" alt="Dusk"></a>
         </div>
 
         <div class="information">
             <h3>Overview</h3>
-            <p>This site serves as a launchpad for all my in-class exercises and projects for Web Design and Implementation (IGME 230).
-                It needed to have an image of me, as well as links for all the exercises and projects so they're easily accessible.
+            <p>For this site, I was tasked with using a javascript library we did not cover in class to create a site with interactive 
+                graphics. I chose to use three.js, which is a library used to make 3D web graphics using webGL.
             </p>
 
             <h3>Tools and Technologies</h3>
-            <p>This project uses HTML5 and CSS, and was uploaded to GitHub Pages</p>
+            <p>This project uses HTML5, CSS, jQuery, three.js, and was uploaded to GitHub Pages</p>
 
             <h3>Challenges</h3>
-            <p>Orginally, the "pop" animation on the circular links wasn't isolated and happend to all of them at once. This was fixed
-                using the ":nth-child()" selector to add more of a delay to each child, causing them to pop into place one at a time. 
-                Also, the circles were all different sizes based on the title size of the exercise, and the rows became staggered when
-                these titles wrapped or got too long. To fix this, each link was put into an unordered list and flexbox was used to
-                keep them aligned.
+            <p>three.js was a challenge to learn as I have no previous background in 3D graphics or webGL. Also, due to recent updates of the 
+                library, many tutorials and guides were oudated and pieces of code suggested no longer worked. One example of this was I originally
+                planned to construct my water plane in Blender to create waves, however three.js no longer supports directly importing Blender models.
+                I was able to use a plane within three.js itself with a reflective water texture instead.
             </p>
         </div>
     </div>
