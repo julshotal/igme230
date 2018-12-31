@@ -563,17 +563,23 @@ h2 {
         margin: 0 auto;
     }
 
-    /*hide all links and format dropdowns for smaller screen*/
+
     .dropdown {
         display: none;
-        order: 1;
-        width: 100%;
+        position: absolute;
+        z-index: 1;
+
+        padding-top: 0px;
+        margin-top: 0px;
+        
     }
 
     .dropdownCNT {
         display: none;
-        order: 4;
-        width: 100%;
+
+        position: absolute;
+        left: 50px;
+        z-index: 1;
     }
 
     .dropdown .button, .dropdownCNT .button, .dropdown button, .dropdownCNT button {
