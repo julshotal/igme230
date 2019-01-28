@@ -242,7 +242,7 @@ h2 {
 }*/
 
 /*apply animation to the myface div, div is empty but once height is set a background image can be applied*/
-#myface {
+/*#myface {
     order: 1;
     background-image: url("images/hexagon.png");
     background-repeat: no-repeat;
@@ -252,7 +252,7 @@ h2 {
     padding: 0px 30px 0px 200px;
     transition: .8s;
     animation: turn 1s linear 1s 1 both;
-}
+}*/
 
 /*print button formatting for resume page, and hover effects*/
 
@@ -461,13 +461,13 @@ h2 {
     }
 
     /*adjust image on front page*/
-    #myface {
+    /*#myface {
         order: 1;
         margin: 0 auto;
         background-image: url("images/hexagon.png");
         background-repeat: no-repeat;
         animation: turn 1s linear 1 forwards;
-    }
+    }*/
 
     /*hide embedded pdf on about page and replace w/ slideshow*/
     #pdf {
