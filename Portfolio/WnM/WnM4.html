@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: Coin Counter</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <a class = "button" href="../index.html">Home</a>
+            <button class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+                <a href="../JS/JavaScript.html">JavaScript</a>
+                <a href="../CSharp/CSharp.html">C#</a>
+                <a href="WebMobile.html">Web and Mobile</a>
+                <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+        <a class = "button" href="../ContactMe.html">Contact Me</a>
+        <a class = "button" href="../Resume.html">Resume</a>
+        <a class = "button" href="../AboutSite.html">About This Site</a>
+        </div>
+    
+        
+        <h1 class="contenthead">Coin Counter</h1>
+        <p class="intro">click on the image below to view the live page
+        </p>
+        
+        <div class="stuff">
+        <div class="image">
+            <a href="https://jjheipz24.github.io/CoinCounter/index.html"><img src="../images/CC.jpg" alt="CoinCounter"></a>
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>A special education teacher approached me with the problem that her students have difficulties with visualizing money and figuring out how to give change. We decided to create an application that would benefit those students, as well as younger children or anyone else who is a more visual learner.
+                Also, as more and more of our lives become digital, the use of debit or credit cards can lead to many visualizing money through screens. Through this website, we can use a digital medium to reach out to users and help them navigate
+                the connection physical currency and it's value.</p>
+
+               <p> This program to allow the user to input an amount, which will then be shown with the physical equivalence with the number of coins/bills alongside it. To assist with giving change, the user only has to input the starting cost and then click on the money that was given to them, and then the program will calculate the change and show which bills and coins to use (and how much of each). We also have a page that displays all of the graphics of the bills and coins, which the user can click. Upon clicking, the user will be directed to a page with the bill/coin rotating to reveal the front and backside, as well as fun facts and identifying features.
+            </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project uses Javascript, jQuery, Bootstrap, three.js, HTML, Photoshop, and Illustrator and was completed in under 24 hours for BrickHacks V with two other teammates</p>
+
+            <h3>Awards</h3>
+            <p>Coin Counter won the award for Best Multimedia Hack</p>
+
+            <h3>Challenges</h3>
+            <p>The calculation part of the program was written using recursion and quite a few if statements. However, we discovered a small rounding error
+                where if a user enters a value that can eventually be broken down into .05, or one nickel, it will give them five pennies instead. While we had run out of
+                time to correct this, we do know it's due to the way the program handles rounding, as the value will be .04999... which then skips the if statement to divide that value into nickels.
+            </p>
+
+            <p>Also, we learned over the course of two hours that having one person do all the graphics can become very strenous. I worked for about 8 of our ~22 hours on drawing
+                all eight forms of currency front and back, trying to pull out every element that is visually signifigant but simplifying them enough they weren't overwhelming. However, I was able to take a break to set up the three.js 3D visualization before completing the illustrations.
+                Despite the workload, I'm pleased with the outcome and feel the graphics really brought a polish to the project.
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+        $('.drop').click(function () {
+            $('#dropdown').slideToggle(1000);
+        });
+
+        $('.hamburger').click(function () {
+            $('.dropdownCNT').fadeToggle(1000);
+            $('.container').toggleClass('change');
+        });
+        </script>
+</body>
+</html>
