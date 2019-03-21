@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../PortStyle.css" type=text/css>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hotaling's Portfolio: crash_code</title>
+</head>
+
+<body class="content">
+    <div class ="wrapper">
+        <div class="dropdownCNT">
+            <a class = "button" href="../index.html">Home</a>
+            <button class="drop">My Work</button>
+            <div id="dropdown" class="dropdown-content">
+                <a href="../JS/JavaScript.html">JavaScript</a>
+                <a href="../CSharp/CSharp.html">C#</a>
+                <a href="WebMobile.html">Web and Mobile</a>
+                <a href="../GD/GraphicDesign.html">Graphic Design</a>
+            </div>
+        <a class = "button" href="../ContactMe.html">Contact Me</a>
+        <a class = "button" href="../Resume.html">Resume</a>
+        <a class = "button" href="../AboutSite.html">About This Site</a>
+        </div>
+    
+        
+        <h1 class="contenthead">crash_code</h1>
+        <p class="intro">click on the image below to view the live page
+        </p>
+        
+        <div class="stuff">
+        <div class="image">
+            <a href="http://www.crashcodeapp.com/?i=1"><img src="../images/crashcode.png" alt="crashcode"></a>
+        </div>
+
+        <div class="information">
+            <h3>Overview</h3>
+            <p>This site is aimed for beginners or complete newcomers to coding. Learn the basics of Java, Python, and JavaScript through our interactive and instructive site. crash_code targets girls who may find coding daunting and makes it fun and simple to learn the basics in three common programming languages. Studies have shown that women who do not feel prepared for a task will be dissuaded from doing it. crash_code's goal is to help people feel more prepared and confident in coding.</p>
+
+               <p>This site features a UI based on a school notebook, with lessons on one side and a textbox that will run code taken from the lessons. The text box is specifically used to
+                   take out having to learn, download, or pay for some sort of text editor or having to save files to a computer by placing something that can run code into the site itself. Also, while 
+                   we couldn't remove all code-related jargon from the lessons, what was necessary is broken down and defined within the glossary.
+            </p>
+
+            <p>Personally, I wrote the majority of the JavaScript lessons and coding examples, as well as highlighted all keywords and formatted our glossary to sit within the "book" neatly. As with most
+                projects I do, all graphics and textures used were created in Adobe Photoshop by me, with the exception of the background image being a free use stock photo from Pixabay.com that I recolored and created a seamless
+                tile background from. Also, I worked on some of the front page in React, and me and another teammate were responsible for all HTML and CSS.  
+             </p>
+
+            <h3>Tools and Technologies</h3>
+            <p>This project uses React.js, CSS, HTML5, and all illustrations were done in Adobe Photoshop. It was completed by a team of four in under 24 hours for the 2019 Women in Computing hackathon. </p>
+
+            <h3>Awards</h3>
+            <p>crash_code won Harris' Best UI award</p>
+
+            <h3>Challenges</h3>
+            <p>A personal challenge on this project for me was using React.js, as it was my first time using the library. Due to time constraints, as time didn't allow for learning an entire new library
+                on the spot, most of the work with React was done by a teammate. However, I did help with the front page via React, and got to see up close how it works. The challenge came in the React files
+                causing me some issues with obtaining our repository, a problem which was not fixed until about 16 hours and 30k+ files sifted through and deleted. 
+            </p>
+        </div>
+    </div>
+
+        
+
+        <div class="container">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+        
+    </div>
+
+        <script>
+        $('.drop').click(function () {
+            $('#dropdown').slideToggle(1000);
+        });
+
+        $('.hamburger').click(function () {
+            $('.dropdownCNT').fadeToggle(1000);
+            $('.container').toggleClass('change');
+        });
+        </script>
+</body>
+</html>
